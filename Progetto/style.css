@@ -1,0 +1,132 @@
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Mohave:wght@300&display=swap');
+
+        html,
+        body {
+            background-color: rgba(215, 247, 207, 1);
+            height: 100%;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: rgb(43, 106, 84);
+            color: white;
+        }
+
+        nav div a {
+            font-family: 'Mohave', sans-serif;
+            text-decoration: none;
+            color: white;
+            margin-right: 20px;
+        }
+
+        nav div {
+            /*border-style: solid;
+            border-width: 3px;
+            border-color: black;*/
+            text-decoration: none;
+            color: white;
+            width: 49%;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            background-color: rgb(43, 106, 84);
+            color: white;
+
+        }
+
+
+
+        footer p {
+            text-align: center;
+        }
+
+        #interno {
+            margin: 1%;
+            background-image: url(img/interno.jpg);
+        }
+
+        #guida {
+            margin: 1%;
+            background-image: url(img/guida.jpg);
+        }
+
+        #esterno {
+            margin: 1%;
+            background-image: url(img/esterno.jpg);
+        }
+
+        .menuimg {
+            max-width: 100%;
+            padding: 2%;
+            flex: 1;
+            width: 200px;
+            height: auto;
+        }
+
+        .logo {
+            margin-left: 5px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 13px;
+        }
+
+        .flexible-nav {
+            display: flex;
+        }
+
+        .mydiv {
+            display: flex;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .mydiv>div {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .menu {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            text-align: center;
+        }
+
+        .menu>div {
+            font-family: 'Mohave', sans-serif;
+            color: white;
+            justify-content: right;
+            align-items: baseline;
+            display: flex;
+            background-size: cover;
+            width: 300px;
+            height: 200px;
+        }
+
+        #image {
+            max-width: 100%;
+            align-items: center;
+
+        }
+
+        @media (max-width: 900px) {
+            .mydiv>div {
+                flex-direction: column;
+            }
+        }
+
+        #descrizione {
+            width: 100%;
+            text-align: center;
+        }
+    
