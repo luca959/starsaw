@@ -9,26 +9,19 @@
         }
 
         nav {
+            display: flex;
             position: fixed;
             width: 100%;
             background-color: rgb(43, 106, 84);
             color: white;
         }
 
-        nav div a {
-            font-family: 'Mohave', sans-serif;
-            text-decoration: none;
-            color: white;
-            margin-right: 20px;
-        }
-
         nav div {
             /*border-style: solid;
             border-width: 3px;
             border-color: black;*/
-            text-decoration: none;
             color: white;
-            width: 49%;
+            width: 50%;
         }
 
         footer {
@@ -39,8 +32,6 @@
             color: white;
 
         }
-
-
 
         footer p {
             text-align: center;
@@ -67,19 +58,6 @@
             flex: 1;
             width: 200px;
             height: auto;
-        }
-
-        .logo {
-            margin-left: 5px;
-        }
-
-        .buttons {
-            text-align: center;
-            margin-top: 13px;
-        }
-
-        .flexible-nav {
-            display: flex;
         }
 
         .mydiv {
@@ -113,6 +91,26 @@
             height: 200px;
         }
 
+        #buttons>a {
+            font-family: 'Mohave', sans-serif;
+            text-decoration: none;
+            color: white;
+            padding: 12px;
+        }
+
+        #buttons>a:hover{
+            background-color: rgba(60, 143, 114, 0.993);
+        }
+
+        #buttons {
+            line-height: 45px;
+            text-align: right;
+        }
+
+        #logo {
+            margin-left: 5px;
+        }
+
         #image {
             max-width: 100%;
             align-items: center;
@@ -122,6 +120,19 @@
         @media (max-width: 900px) {
             .mydiv>div {
                 flex-direction: column;
+            }
+        }
+
+        @media (max-width: 463px) {
+            nav {
+                flex-direction: column;
+            }
+            nav>div {
+                width: 100%;
+                text-align: center;
+            }                   
+            nav>#buttons {
+                text-align: center;
             }
         }
 
