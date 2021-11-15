@@ -2,6 +2,7 @@
   <?php
     include "menu.php";
     ?>
+
     <div class="mydiv">
 
         <img id="image" src="img/home.jpg" alt="">
@@ -22,13 +23,13 @@
             <img class="menuimg" id="interno" src="img/interno.jpg" alt="">
             <img class="menuimg" id="guida" src="img/guida.jpg" alt="">-->
             <div id="interno">
-                <h1>Bonsai da interno</h1>
+                <h1 class="headerbc">Bonsai da interno</h1>
             </div>
             <div id="esterno">
-                <h1>Bonsai da esterno</h1>
+                <h1 class="headerbc">Bonsai da esterno</h1>
             </div>
             <div id="guida">
-                <h1>Guida</h1>
+                <h1 class="headerbc">Guida</h1>
             </div>
         </div>
 
