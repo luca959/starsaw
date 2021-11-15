@@ -18,21 +18,21 @@
     <form id="myform" action="registrationProcess.php" method="POST"> 
 
     <i class="fa fa-user" style="font-size:13px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="text" class="" id="" name="nome" placeholder="Nome"><br>
+    <input type="text" class="inputHover" name="nome" placeholder="Nome"><br>
 
     <i class="fa fa-user" style="font-size:13px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="text" class="" id="" name="cognome" placeholder="Cognome"><br>
+    <input type="text" class="inputHover" name="cognome" placeholder="Cognome"><br>
 
     <i class="fa fa-envelope" style="font-size:9px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="email" id="" class=""  name="email" placeholder="E-mail"><br>
+    <input type="email" id="" class="inputHover"  name="email" placeholder="E-mail"><br>
 
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="password" class="" id="" name="password" placeholder="Password"><br>
+    <input type="password" class="inputHover" name="password" placeholder="Password"><br>
 
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="password" class=""  id="" name="conferma" placeholder="Conferma password"><br>
+    <input type="password" class="inputHover"  name="conferma" placeholder="Conferma password"><br>
 
-    <input type="invia" value="Invia">
+    <input type="submit" value="Invia">
 
    </form>
   </div>

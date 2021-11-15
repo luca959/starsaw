@@ -17,12 +17,12 @@
     <form id="myform" action="loginProcess.php" method="POST"> 
 
     <i class="fa fa-envelope" style="font-size:9px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="email" id="email" class=""  name="email" placeholder="E-mail"><br>
+    <input type="email" name="email" placeholder="E-mail"><br>
 
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="password" class="" id="pass" name="pass" placeholder="Password"><br>
+    <input type="password" class="inputHover" name="pass" placeholder="Password"><br>
 
-    <input type="invia" value="Invia">
+    <input type="submit" value="Invia">
 
    </form>
   </div>

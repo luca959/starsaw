@@ -82,7 +82,7 @@ footer p {
 }
 
 .menu > div > h1 {
-  background-color: rgb(43, 106, 84);
+  background-color: rgb(43, 106, 84, 0.8);
   padding: 1%;
 }
 
@@ -144,6 +144,7 @@ footer p {
 }
 
 #myform {
+  padding:30px;
   margin-top: 45px;
   text-align: center;
 }
@@ -152,4 +153,54 @@ footer p {
   color: rgb(43, 106, 84);
   width: 100%;
   text-align: center;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  width: 280px; 
+  height: 35px;
+  margin: 5px;
+  margin-left: 1px;
+  background-color: rgba(255,255,255,1.0);
+  color: rgb(43, 106, 84);
+  font-size: 15px;
+  border-color: rgb(43, 106, 84);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.inputHover{
+  color: rgba(70,70,70,1.0);
+  border-bottom: solid 0.5px rgba(10,10,10,1.0);
+  background-color: rgba(249,246, 239, 0.5);
+}
+
+input[type=text]:hover {
+  color: rgba(70,70,70,1.0);
+  border-bottom: solid 0.5px rgba(10,10,10,1.0);
+  background-color: rgba(249,246, 239, 0.5);
+}
+
+input[type=password]:hover {
+  color: rgba(70,70,70,1.0);
+  border-bottom: solid 0.5px rgba(10,10,10,1.0);
+  background-color: rgba(249,246, 239, 0.5);
+}
+
+input[type=email]:hover {
+  color: rgba(70,70,70,1.0);
+  border-bottom: solid 0.5px rgba(10,10,10,1.0);
+  background-color: rgba(249,246, 239, 0.5);
+}
+
+input[type=submit] {
+  text-align: center;
+  width: 295px; 
+  height: 35px;
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: rgb(43, 106, 84);
+  color: white;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
 }
