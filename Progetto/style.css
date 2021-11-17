@@ -17,18 +17,21 @@ nav {
   color: white;
 }
 
-nav div {
+#logo {
   /*border-style: solid;
-            border-width: 3px;
-            border-color: black;*/
-  color: white;
-  width: 50%;
+  border-width: 3px;
+  border-color: black;*/
+  width: 20%;
+}
+
+#buttons {
+  width: 80%;
 }
 
 footer {
-  position: relative;
+  bottom: 0%;
+  flex-shrink: 0;
   width: 100%;
-  bottom: 0;
   background-color: rgb(43, 106, 84);
   color: white;
 }
@@ -79,6 +82,13 @@ footer p {
   height: 200px;
   box-shadow: 4px 4px 10px black;
   margin: 1%;
+  transition: 0.5s;
+}
+
+.menu > div:hover {
+  width: 312px;
+  height: 206px;
+  box-shadow: 8px 8px 20px black;
 }
 
 .menu > div > h1 {
@@ -90,6 +100,7 @@ footer p {
   text-decoration: none;
   color: white;
   padding: 13px;
+  transition: 0.5s;
 }
 
 #buttons > a:hover {
@@ -97,7 +108,8 @@ footer p {
 }
 
 #buttons {
-  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   text-align: right;
 }
 
@@ -119,15 +131,16 @@ footer p {
   }
 }
 
-@media (max-width: 463px) {
+@media (max-width: 449px) {
   nav {
     flex-direction: column;
   }
-  nav > div {
+  #logo {
     width: 100%;
     text-align: center;
   }
-  nav > #buttons {
+  #buttons {
+    width: 100%;
     text-align: center;
   }
   #image {
@@ -144,7 +157,7 @@ footer p {
 }
 
 #myform {
-  padding:30px;
+  padding: 30px;
   margin-top: 45px;
   text-align: center;
 }
@@ -155,12 +168,14 @@ footer p {
   text-align: center;
 }
 
-input[type=text], input[type=email], input[type=password] {
-  width: 280px; 
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 280px;
   height: 35px;
   margin: 5px;
   margin-left: 1px;
-  background-color: rgba(255,255,255,1.0);
+  background-color: rgba(255, 255, 255, 1);
   color: rgb(43, 106, 84);
   font-size: 15px;
   border-color: rgb(43, 106, 84);
@@ -168,33 +183,33 @@ input[type=text], input[type=email], input[type=password] {
   cursor: pointer;
 }
 
-.inputHover{
-  color: rgba(70,70,70,1.0);
-  border-bottom: solid 0.5px rgba(10,10,10,1.0);
-  background-color: rgba(249,246, 239, 0.5);
+.inputHover {
+  color: rgba(70, 70, 70, 1);
+  border-bottom: solid 0.5px rgba(10, 10, 10, 1);
+  background-color: rgba(249, 246, 239, 0.5);
 }
 
-input[type=text]:hover {
-  color: rgba(70,70,70,1.0);
-  border-bottom: solid 0.5px rgba(10,10,10,1.0);
-  background-color: rgba(249,246, 239, 0.5);
+input[type="text"]:hover {
+  color: rgba(70, 70, 70, 1);
+  border-bottom: solid 0.5px rgba(10, 10, 10, 1);
+  background-color: rgba(249, 246, 239, 0.5);
 }
 
-input[type=password]:hover {
-  color: rgba(70,70,70,1.0);
-  border-bottom: solid 0.5px rgba(10,10,10,1.0);
-  background-color: rgba(249,246, 239, 0.5);
+input[type="password"]:hover {
+  color: rgba(70, 70, 70, 1);
+  border-bottom: solid 0.5px rgba(10, 10, 10, 1);
+  background-color: rgba(249, 246, 239, 0.5);
 }
 
-input[type=email]:hover {
-  color: rgba(70,70,70,1.0);
-  border-bottom: solid 0.5px rgba(10,10,10,1.0);
-  background-color: rgba(249,246, 239, 0.5);
+input[type="email"]:hover {
+  color: rgba(70, 70, 70, 1);
+  border-bottom: solid 0.5px rgba(10, 10, 10, 1);
+  background-color: rgba(249, 246, 239, 0.5);
 }
 
-input[type=submit] {
+input[type="submit"] {
   text-align: center;
-  width: 295px; 
+  width: 295px;
   height: 35px;
   margin-top: 30px;
   border-radius: 15px;
