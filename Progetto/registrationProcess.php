@@ -11,26 +11,12 @@
 $filename = $_SERVER['DOCUMENT_ROOT'] . "/../private/mydata.txt"; // vado a creare il database al di fuori della doc root
 $database = fopen($filename, "a"); //con a apro il file in append mode
 
-    if (empty($_POST['firstname'])) //controllo se il campo è vuoto 
-        die('<h1>Il campo "Firstname" è vuoto!</h1>');
+    if (empty($_POST['firstname'])||empty($_POST['lastname'])||empty($_POST['pass']) ||empty($_POST['confirm']) || empty($_POST['email'])) //controllo se il campo è vuoto 
+        die('<h1>Campi Mancanti!</h1>');
 
 
-    if (empty($_POST['lastname'])) {
-        die('<h1>Il campo "Lastname" è vuoto!</h1>');
-    }
 
-    if (empty($_POST['pass'])) {
-        die('<h1>Il campo "Password" è vuoto!</h1>');
-    }
 
-    if (empty($_POST['confirm'])) {
-        die('<h1>Il campo "Confirm" Password è vuoto!</h1>');
-    }
-
-    if (empty($_POST['email'])) {
-        die('<h1>Il campo "Email" è vuoto!</h1>');
-    }
-    
     include 'connection.php';             // mi connetto al database
     //include 'allusers.php'; 
     $dati[0] = mysqli_real_escape_string($con, $_POST['firstname']); //$dati[0] contiene il nome
