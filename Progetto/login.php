@@ -8,12 +8,12 @@
 
 <body>
    <?php
-      include 'menu.php'
-    ?>
+include 'menu.php'
+?>
 
-<div class="mydiv"> 
-   <div> 
-    <form id="myform" action="loginProcess.php" method="POST"> 
+<div class="mydiv">
+   <div>
+    <form id="myform" action="loginProcess.php" method="POST">
 
     <i class="fa fa-envelope" style="font-size:9px;color:rgba(65, 65, 65, 1.0)"></i>
     <input type="email" name="email" placeholder="E-mail" required><br>
@@ -29,8 +29,9 @@
 </div>
 
 <?php
-    include 'footer.php'
+include 'footer.php'
 ?>
 </body>
 </html>
 
+<!--curl -X POST -F "email=eziogreggio@gmail.com" -F "pass=aa" http://localhost/Progetto/login.php-->
