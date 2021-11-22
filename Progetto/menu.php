@@ -4,7 +4,7 @@ if(!isset($_SESSION['id'])){
 echo '
   <nav>
   <div id="logo">
-      <img src="img/logo.jpg" alt="logo">
+      <a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
   </div>
 
   <div id="buttons">
@@ -21,7 +21,7 @@ else {
   echo '
   <nav>
   <div id="logo">
-      <img src="img/logo.jpg" alt="logo">
+     <a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
   </div>
 
   <div id="buttons">

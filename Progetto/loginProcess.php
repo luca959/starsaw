@@ -17,16 +17,17 @@
 	
 	include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';  
 	
-	$dati[0]=$_POST['pass'];		//$dati[0] contiene la password
-	$dati[1]=$_POST['email'];		//$dati[1] contiene la mail
+	$email=trim($_POST["email"]);
+	$pass=trim($_POST["pass"]);
+	$email = mysqli_real_escape_string($mysqli,$email);
 
-	$select_query = "SELECT * FROM utenti WHERE email='".$dati[1]."'";      //query per vedere se c'è già un utente con quella mail
+	$select_query = "SELECT * FROM utenti WHERE email='".$email."'";      //query per vedere se c'è già un utente con quella mail
     
 	$result = mysqli_query($con, $select_query);
     
 	$res=mysqli_fetch_assoc($result);     //eseguo la query per vedere se c'è già un utente con quella mail
 	
-	if(password_verify($dati[0], $res["pass"])){
+	if(password_verify($pass, $res["pass"])){
 		echo "<h1> Benvenuto ".$res['firstname']."</h1>";
 		$_SESSION['firstname']=$res['firstname'];
 		$_SESSION['lastname']=$res['lastname'];
