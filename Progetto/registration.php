@@ -17,19 +17,19 @@
     <form id="myform" action="registrationProcess.php" method="POST"> 
 
     <i class="fa fa-user" style="font-size:13px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="text" class="inputHover" name="nome" placeholder="Nome" required><br>
+    <input type="text" class="inputHover" name="firstname" placeholder="Nome" required><br>
 
     <i class="fa fa-user" style="font-size:13px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="text" class="inputHover" name="cognome" placeholder="Cognome" required><br>
+    <input type="text" class="inputHover" name="lastname" placeholder="Cognome" required><br>
 
     <i class="fa fa-envelope" style="font-size:9px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="email" id="" class="inputHover"  name="email" placeholder="E-mail" required><br>
+    <input type="email" class="inputHover"  name="email" placeholder="E-mail" required><br>
 
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="password" class="inputHover" name="password" placeholder="Password" required><br>
+    <input type="password" class="inputHover" name="pass" placeholder="Password" required><br>
 
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="password" class="inputHover"  name="conferma" placeholder="Conferma password" required><br>
+    <input type="password" class="inputHover"  name="confirm" placeholder="Conferma password" required><br>
 
     <input type="submit" value="Invia">
 

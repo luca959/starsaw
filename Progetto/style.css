@@ -29,6 +29,7 @@ nav {
 }
 
 footer {
+
   flex-shrink: 0;
   width: 100%;
   background-color: rgb(43, 106, 84);
@@ -74,7 +75,6 @@ footer p {
 }
 
 .menu > div {
-  border-radius: 15px;
   color: white;
   justify-content: right;
   align-items: baseline;
@@ -84,11 +84,13 @@ footer p {
   height: 200px;
   box-shadow: 4px 4px 10px black;
   margin: 1%;
-  transition: 0.5s;
+  transition-property: width, height , box-shadow;
+  transition-duration: 1s;
 }
 
 .menu > div:hover {
-  transform: scale(1.05);
+  width: 312px;
+  height: 206px;
   box-shadow: 8px 8px 20px black;
 }
 

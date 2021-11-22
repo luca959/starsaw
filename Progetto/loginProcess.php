@@ -10,9 +10,6 @@
 <?php
 	session_start();
 
-	$filename=$_SERVER['DOCUMENT_ROOT']."/../private/mydata.txt";		// vado a creare il database al di fuori della doc root
-	$database = fopen($filename, "r");		//con r apro il file in read mode
-
   if(empty($_POST['pass']))
     die('<h1>Il campo "Password" è vuoto!</h1>');
   if(empty($_POST['email']))
