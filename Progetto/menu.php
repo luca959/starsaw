@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['id'])){
-echo '
+if (!isset($_SESSION['email'])) {
+    echo '
   <nav>
   <div id="logo">
       <a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
@@ -16,9 +16,8 @@ echo '
   </div>
 </nav>
 ';
-}
-else {
-  echo '
+} else {
+    echo '
   <nav>
   <div id="logo">
      <a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
@@ -29,7 +28,7 @@ else {
       <a href="index.php">Home</a>
       <a href="#">Carrello</a>
       <a href="#">Profilo</a>
-      <a href="#">Logout</a>
+      <a href="logout.php">Esci</a>
   </div>
 </nav>
 ';
