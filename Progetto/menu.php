@@ -27,7 +27,7 @@ if (!isset($_SESSION['email'])) {
 
       <a href="index.php">Home</a>
       <a href="#">Carrello</a>
-      <a href="#">Profilo</a>
+      <a href="profile.php">Profilo</a>
       <a href="logout.php">Esci</a>
   </div>
 </nav>

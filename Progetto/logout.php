@@ -9,19 +9,18 @@
 <body>
    <?php
 include 'menu.php';
-?>
+echo '<div class="mydiv">
 <div>
-<h1>Grazie per aver visitato Bonshop</h1>
+<h1 class = "h1" >Grazie per aver visitato Bonshop</h1>
 </div>
-<?php
-
+</div>';
 include 'footer.php';
 unset($_SESSION['id']);
 $_SESSION = array();
 session_destroy();
 //setcookie(session_name(), '', time() - 42000);
 
-//header("Refresh:5; url=index.php");
+header("Refresh:3; url=index.php");
 
 ?>
 </body>

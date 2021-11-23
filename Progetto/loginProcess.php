@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang = "it">
 <head>
-	<meta charset="UTF-8">
-    <title>Login</title>
+    <title>Bonshop: Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 
 <body>
 
 <?php
-session_start();
+include "menu.php";
+
+//session_start();
 
 if (empty($_POST['pass'])) {
     die('<h1>Il campo "Password" è vuoto!</h1>');
@@ -34,11 +38,28 @@ if (password_verify($pass, $res["pass"])) {
     $_SESSION['firstname'] = $res['firstname'];
     $_SESSION['id'] = session_id();
 
-    die("<h1> Benvenuto " . $res['firstname'] . "</h1>");
-}
+    echo '<div class="mydiv">
+                <div>
+                    <h1 class = "h1"> Benvenuto ' . $res['firstname'] . '</h1>
+                </div>
+        </div>';
+    header("Refresh:3; url=index.php");
 
-die("<h1> Utente o Password errati </h1>") //altrimenti restituisco un errore
+} else {
+    echo '<div class="mydiv">
+            <div>
+                <h1 class = "h1"> Utente o password errati </h1>
+            </div>
+        </div>';
+
+    header("Refresh:3; url=index.php");
+
+}
 ?>
 
+<?php
+include "footer.php";
+
+?>
 </body>
 </html>
