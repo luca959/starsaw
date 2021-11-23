@@ -74,6 +74,7 @@ footer p {
 }
 
 .menu > div {
+  border-radius: 15px;
   color: white;
   justify-content: right;
   align-items: baseline;
