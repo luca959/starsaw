@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
+    <script type="text/javascript" src="script.js"></script>
     <title>Registrazione</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,7 +16,7 @@ include 'menu.php'
 <div class="mydiv">
    <div>
     <h1 class = "center">Registrati</h1>
-    <form id="myform" action="registrationProcess.php" method="POST">
+    <form id="myform" method="POST" name="registrazione">
 
     <i class="fa fa-user" style="font-size:13px;color:rgba(65, 65, 65, 1.0)"></i>
     <input type="text" class="inputHover" name="firstname" placeholder="Nome" required><br>
@@ -31,8 +32,9 @@ include 'menu.php'
 
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
     <input type="password" class="inputHover"  name="confirm" placeholder="Conferma password" required><br>
+    <p id="control" style="color:red"></p>
 
-    <input type="submit" value="Invia">
+    <input type="submit" value="Invia" onClick="controllo()">
 
    </form>
   </div>

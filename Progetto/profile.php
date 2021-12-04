@@ -43,10 +43,10 @@ echo "
             <input type='email' id='email' class='no-outline'  name='email' value='$email' required><br>
 
             <i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
-            <input type='password' class='no-outline' id='pass' name='pass' placeholder='Password' required><br>
+            <input type='password' class='no-outline' id='pass' name='pass' placeholder='Password' ><br>
 
             <i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
-            <input type='password' class='no-outline'  id='confirm' name='confirm' placeholder='Confirm password' required><br>
+            <input type='password' class='no-outline'  id='confirm' name='confirm' placeholder='Confirm password' ><br>
 
             <input type='submit' value='Submit'>
 

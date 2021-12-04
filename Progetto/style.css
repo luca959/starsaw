@@ -24,10 +24,6 @@ nav {
   width: 20%;
 }
 
-#buttons {
-  width: 80%;
-}
-
 footer {
   flex-shrink: 0;
   width: 100%;
@@ -95,6 +91,10 @@ footer p {
 .menu > div > h1 {
   background-color: rgb(43, 106, 84, 0.8);
   padding: 1%;
+}
+
+#buttons {
+  width: 80%;
 }
 
 #buttons > a {
