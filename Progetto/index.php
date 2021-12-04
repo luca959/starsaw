@@ -10,6 +10,7 @@
     <title>Bonshop: Home</title>
     <link rel="icon" type="image/x-icon" href="/Progetto/img/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -31,15 +32,19 @@ include "menu.php";
             </p>
 
         </div>
-
+ 
         <div class="menu">
-            <div id="interno">
+            <div id="interno" onclick="int()">
                 <h1>Bonsai da interno</h1>
             </div>
-            <div id="esterno">
-                <h1>Bonsai da esterno</h1>
+      
+            <div id="esterno" onclick="est()">
+           
+                <h1> Bonsai da esterno </h1>
+          
             </div>
-            <div id="guida">
+          
+            <div id="guida" onclick="guid()">
                 <h1>Guida</h1>
             </div>
         </div>
