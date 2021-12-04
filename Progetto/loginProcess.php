@@ -15,11 +15,11 @@ include "menu.php";
 //session_start();
 
 if (empty($_POST['pass'])) {
-    die('<h1>Il campo "Password" è vuoto!</h1>');
+    die("<h1 class = 'center'>Il campo Password è vuoto </h1>");
 }
 
 if (empty($_POST['email'])) {
-    die('<h1>Il campo "Email" è vuoto!</h1>');
+    die("<h1 class = 'center'>Il campo Email è vuoto </h1>");
 }
 
 include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
@@ -38,20 +38,11 @@ if (password_verify($pass, $res["pass"])) {
     $_SESSION['firstname'] = $res['firstname'];
     $_SESSION['id'] = session_id();
 
-    echo '<div class="mydiv">
-                <div>
-                    <h1 class = "h1"> Benvenuto ' . $res['firstname'] . '</h1>
-                </div>
-        </div>';
+    echo "<h1 class = 'center'> Benvenuto " . $res['firstname'] . "</h1>";
     header("Refresh:3; url=index.php");
 
 } else {
-    echo '<div class="mydiv">
-            <div>
-                <h1 class = "h1"> Utente o password errati </h1>
-            </div>
-        </div>';
-
+    echo "<h1 class = 'center'> Utente o password errati </h1>";
     header("Refresh:3; url=index.php");
 
 }

@@ -2,14 +2,12 @@
 session_start();
 if (!isset($_SESSION['email'])) {
     echo '
-  <nav>
+<nav>
   <div id="logo">
       <a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
   </div>
 
   <div id="buttons">
-
-      <a href="index.php">Home</a>
       <a href="#">Carrello</a>
       <a href="login.php">Accedi</a>
       <a href="registration.php">Registrati</a>
@@ -18,7 +16,7 @@ if (!isset($_SESSION['email'])) {
 ';
 } else {
     echo '
-  <nav>
+<nav>
   <div id="logo">
      <a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
   </div>
@@ -33,3 +31,5 @@ if (!isset($_SESSION['email'])) {
 </nav>
 ';
 }
+?>
+

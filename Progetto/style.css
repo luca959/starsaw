@@ -10,8 +10,8 @@ body {
 }
 
 nav {
+  top: 0px;
   display: flex;
-  position: fixed;
   width: 100%;
   background-color: rgb(43, 106, 84);
   color: white;
@@ -34,7 +34,7 @@ footer {
   background-color: rgb(43, 106, 84);
   color: white;
   position: relative;
-  bottom: 0%;
+  bottom: 0px;
 }
 
 footer p {
@@ -118,7 +118,6 @@ footer p {
 }
 
 #image {
-  margin-top: 45px;
   width: 100%;
   align-items: center;
   border-bottom-left-radius: 15px;
@@ -185,7 +184,7 @@ input[type="password"] {
 }
 
 .inputHover:hover {
-  color: rgba(70, 70, 70, 1);
+  color: rgb(43, 106, 84);
   background-color: rgba(249, 246, 239, 0.5);
 }
 
@@ -202,8 +201,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.h1 {
-  margin-top: 50%;
-  margin-bottom: 50%;
+.center {
   text-align: center;
 }

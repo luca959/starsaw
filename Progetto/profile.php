@@ -13,11 +13,8 @@
 include 'menu.php';
 
 if (!isset($_SESSION['email'])) {
-    die("<h1> Non puoi accedere! </h1>");
-} else {
-    echo "<h1 class = 'h1'>Modifica Profilo</h1>";
+    die("<h1 class = 'center' > Non puoi accedere! </h1>");
 }
-
 /*----------------------------INIZIO AD INTERAGIRE CON IL DB----------------------------*/
 include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 
@@ -30,29 +27,32 @@ $firstname = $res['firstname']; //prendo i valori dal risultato della query
 $lastname = $res['lastname'];
 $email = $res['email'];
 
-echo "<div class='mydiv'>
+echo "
+<div class='mydiv'>
    <div>
-    <form id='myform' action='profileUpdate.php' method='POST'>
+        <h1 class = 'center'>Modifica Profilo</h1>
+        <form id='myform' action='profileUpdate.php' method='POST'>
 
-    <i class='fa fa-user' style='font-size:13px;color:rgba(65, 65, 65, 1.0)'></i>
-    <input type='text' class='no-outline' id='firstname' name='firstname' value='$firstname'><br>
+            <i class='fa fa-user' style='font-size:13px;color:rgba(65, 65, 65, 1.0)'></i>
+            <input type='text' class='no-outline' id='firstname' name='firstname' value='$firstname' required><br>
 
-    <i class='fa fa-user' style='font-size:13px;color:rgba(65, 65, 65, 1.0)'></i>
-    <input type='text' class='no-outline' id='lastname' name='lastname' value='$lastname'><br>
+            <i class='fa fa-user' style='font-size:13px;color:rgba(65, 65, 65, 1.0)'></i>
+            <input type='text' class='no-outline' id='lastname' name='lastname' value='$lastname' required><br>
 
-    <i class='fa fa-envelope' style='font-size:9px;color:rgba(65, 65, 65, 1.0)'></i>
-    <input type='email' id='email' class='no-outline'  name='email' value='$email'><br>
-<i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
-    <input type='password' class='no-outline' id='pass' name='pass' placeholder='Password'><br>
+            <i class='fa fa-envelope' style='font-size:9px;color:rgba(65, 65, 65, 1.0)'></i>
+            <input type='email' id='email' class='no-outline'  name='email' value='$email' required><br>
 
-    <i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
-    <input type='password' class='no-outline'  id='confirm' name='confirm' placeholder='Confirm password'><br>
+            <i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
+            <input type='password' class='no-outline' id='pass' name='pass' placeholder='Password' required><br>
 
-    <input type='submit' value='Submit'>
+            <i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
+            <input type='password' class='no-outline'  id='confirm' name='confirm' placeholder='Confirm password' required><br>
 
-   </form>
-  </div>
-  </div>";
+            <input type='submit' value='Submit'>
+
+        </form>
+    </div>
+</div>";
 
 //mysqli_free_result($res);
 mysqli_close($con);

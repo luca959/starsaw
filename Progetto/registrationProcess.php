@@ -10,38 +10,7 @@
 <?php
 
 include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php'; //Mi connetto al DB
-
-if (empty($_POST['firstname'])) { //controllo se il campo è vuoto
-    die('<h1>Il campo "Nome" è vuoto!</h1>');
-}
-
-if (empty($_POST['lastname'])) {
-    die('<h1>Il campo "Cognome" è vuoto!</h1>');
-}
-
-if (empty($_POST['pass'])) {
-    die('<h1>Il campo "Password" è vuoto!</h1>');
-}
-
-if (empty($_POST['confirm'])) {
-    die('<h1>Il campo "Conferma Password" è vuoto!</h1>');
-}
-
-if (empty($_POST['email'])) {
-    die('<h1>Il campo "Email" è vuoto!</h1>');
-}
-
-$fname = mysqli_real_escape_string($con, trim($_POST["firstname"]));
-$lname = mysqli_real_escape_string($con, trim($_POST["lastname"]));
-$email = mysqli_real_escape_string($con, trim($_POST["email"]));
-$pass = trim($_POST["pass"]);
-$confirm = trim($_POST["confirm"]);
-
-if ($pass != $confirm) {
-    die('<h1>Le password non coincidono</h1>');
-}
-
-$pass = password_hash($pass, PASSWORD_DEFAULT);
+include "inputChecks.php";
 $insert_query = "INSERT INTO utenti (firstname,lastname,email,pass) VALUES ('$fname', '$lname', '$email','$pass')"; // query per inserire un nuovo utente
 $select_query = "SELECT * FROM utenti WHERE email='" . $email . "'"; //query per vedere se c'è già un utente con quella mail
 

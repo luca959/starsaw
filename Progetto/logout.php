@@ -9,11 +9,8 @@
 <body>
    <?php
 include 'menu.php';
-echo '<div class="mydiv">
-<div>
-<h1 class = "h1" >Grazie per aver visitato Bonshop</h1>
-</div>
-</div>';
+echo "<h1 class = 'center'> Grazie per aver visitato Bonshop </h1>";
+
 include 'footer.php';
 unset($_SESSION['id']);
 $_SESSION = array();

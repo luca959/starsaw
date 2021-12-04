@@ -9,12 +9,13 @@
 <body>
 
     <?php
-    include 'menu.php'
-    ?>
+include 'menu.php'
+?>
 
-<div class="mydiv"> 
-   <div> 
-    <form id="myform" action="registrationProcess.php" method="POST"> 
+<div class="mydiv">
+   <div>
+    <h1 class = "center">Registrati</h1>
+    <form id="myform" action="registrationProcess.php" method="POST">
 
     <i class="fa fa-user" style="font-size:13px;color:rgba(65, 65, 65, 1.0)"></i>
     <input type="text" class="inputHover" name="firstname" placeholder="Nome" required><br>
@@ -39,7 +40,7 @@
 </div>
 
 <?php
-    include 'footer.php'
+include 'footer.php'
 ?>
 </body>
 </html>

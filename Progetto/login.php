@@ -13,6 +13,7 @@ include 'menu.php'
 
 <div class="mydiv">
    <div>
+      <h1 class = "center">Accedi</h1>
     <form id="myform" action="loginProcess.php" method="POST">
 
     <i class="fa fa-envelope" style="font-size:9px;color:rgba(65, 65, 65, 1.0)"></i>
