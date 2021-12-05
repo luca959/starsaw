@@ -18,25 +18,62 @@
 include "menu.php";
 ?>
   <div class="mydiv">
-    <div class="product">
-        <img class="productImage" src="img/ficus.png" alt="Bonsai di Ficus">
-        <p class="productDescription"><b>Ficus</b> <br>
-        Il genere Ficus appartiene alla famiglia delle piante di gelso. </p>
-    </div>
-    <div class="product">
-        <img class="productImage" src="img/sageretia.png" alt="Bonsai di Sageretia">
-        <p class="productDescription"><b>Sageretia</b> <br>
-        La Sageretia è una pianta sempreverde tropicale, originaria della Cina. </p>
-    </div>
-    <div class="product">
+
+
+    <div>
+      <div class="product">
+          <img class="productImage" src="img/ficus.png" alt="Bonsai di Ficus">
+          <p class="productDescription"><b>Ficus</b> <br>
+          Il genere Ficus appartiene alla famiglia delle piante di gelso. </p>
+     </div>
+     <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
 
     </div>
-    <div class="product">
 
-    </div>
-    <div class="product">
 
-    </div>
+
+  <div>
+      <div class="product">
+          <img class="productImage" src="img/sageretia.png" alt="Bonsai di Sageretia">
+          <p class="productDescription"><b>Sageretia</b> <br>
+          La Sageretia è una pianta sempreverde tropicale, originaria della Cina. </p>
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+  </div>
+
+  <div>
+      <div class="product">
+
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+</div>
+
+
+<div>
+      <div class="product">
+
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+</div>
+
+<div>
+      <div class="product">
+
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+</div>
+
+
   </div>
 <?php
 include "footer.php";

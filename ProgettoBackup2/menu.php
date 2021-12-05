@@ -8,6 +8,7 @@ if (!isset($_SESSION['email'])) {
   </div>
 
   <div id="buttons">
+      <a href="index.php">Home</a>
       <a href="#">Carrello</a>
       <a href="login.php">Accedi</a>
       <a href="registration.php">Registrati</a>
@@ -22,7 +23,7 @@ if (!isset($_SESSION['email'])) {
   </div>
 
   <div id="buttons">
-
+      <a href="index.php">Home</a>
       <a href="index.php">Home</a>
       <a href="#">Carrello</a>
       <a href="profile.php">Profilo</a>

@@ -7,37 +7,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonshop: Bonsai da Interno</title>
+    <title>Bonshop: Bonsai da Esterno</title>
     <link rel="icon" type="image/x-icon" href="/Progetto/img/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 
 <body>
-
 <?php
 include "menu.php";
 ?>
+  <div class="mydiv">
 
-    <div class="mydiv">
-        <div class="shop">
-                <div id="interno" >
-                </div>
-    <p>bonsai</p>
-                <div id="esterno" >
-            
-            
-                </div>
-                <h1> Bonsai da esterno </h1>
 
-                <div id="guida" >
-                    <h1>Guida</h1>
-                </div>
+    <div>
+      <div class="product">
+          <img class="productImage" src="img/ficus.png" alt="Bonsai di Ficus">
+          <p class="productDescription"><b>Ficus</b> <br>
+          Il genere Ficus appartiene alla famiglia delle piante di gelso. </p>
+     </div>
+     <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
 
+    </div>
+
+
+
+  <div>
+      <div class="product">
+          <img class="productImage" src="img/sageretia.png" alt="Bonsai di Sageretia">
+          <p class="productDescription"><b>Sageretia</b> <br>
+          La Sageretia è una pianta sempreverde tropicale, originaria della Cina. </p>
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+  </div>
+
+  <div>
+      <div class="product">
+
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
 </div>
+
+
+<div>
+      <div class="product">
+
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+</div>
+
+<div>
+      <div class="product">
+
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+</div>
+
+
+  </div>
 <?php
 include "footer.php";
-
 ?>
 </body>
 </html>
