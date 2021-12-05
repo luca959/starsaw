@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Mohave:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+html,
+body {
+  font-family: "Mohave", sans-serif;
+
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+nav {
+  top: 0px;
+  display: flex;
+  width: 100%;
+  background-color: rgb(43, 106, 84);
+  color: white;
+}
+
+#logo {
+  /*border-style: solid;
+  border-width: 3px;
+  border-color: black;*/
+  width: 20%;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  background-color: rgb(43, 106, 84);
+  color: white;
+  position: relative;
+  bottom: 0px;
+}
+
+footer p {
+  text-align: center;
+}
+
+#interno {
+  background-image: url(img/interno.jpg);
+}
+
+#guida {
+  background-image: url(img/guida.jpg);
+}
+
+#esterno {
+  background-image: url(img/esterno.jpg);
+}
+
+.mydiv {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.mydiv > div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+}
+
+.menu > div {
+  border-radius: 15px;
+  color: white;
+  justify-content: right;
+  align-items: baseline;
+  display: flex;
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  box-shadow: 4px 4px 10px black;
+  margin: 1%;
+  transition-duration: 1s;
+}
+
+.menu > div:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 20px black;
+}
+
+.menu > div > h1 {
+  background-color: rgb(43, 106, 84, 0.8);
+  padding: 1%;
+}
+
+#buttons {
+  width: 80%;
+}
+
+#buttons > a {
+  text-decoration: none;
+  color: white;
+  padding: 14px;
+}
+
+#buttons > a:hover {
+  background-color: rgba(60, 143, 114, 0.993);
+}
+
+#buttons {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: right;
+}
+
+#logo {
+  margin-left: 5px;
+}
+
+#image {
+  width: 100%;
+  align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+@media (max-width: 900px) {
+  .mydiv > .menu {
+    margin-top: 3px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 449px) {
+  nav {
+    flex-direction: column;
+  }
+  #logo {
+    width: 100%;
+    text-align: center;
+  }
+  #buttons {
+    width: 100%;
+    text-align: center;
+  }
+  #image {
+    margin-top: 93px;
+  }
+  #buttons > a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 0%;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+  }
+}
+
+#myform {
+  padding: 30px;
+  margin-top: 45px;
+  text-align: center;
+}
+
+#descrizione {
+  color: rgb(43, 106, 84);
+  width: 100%;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 280px;
+  height: 35px;
+  margin: 5px;
+  margin-left: 1px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgb(43, 106, 84);
+  font-size: 15px;
+  border-color: rgb(43, 106, 84);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.inputHover:hover {
+  color: rgb(43, 106, 84);
+  background-color: rgba(249, 246, 239, 0.5);
+}
+
+input[type="submit"] {
+  text-align: center;
+  width: 295px;
+  height: 35px;
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: rgb(43, 106, 84);
+  color: white;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+.product {
+  font-size: 15px;
+  margin-top: 100px;
+  height: 200px;
+  width: 200px;
+  background-color: rgb(183, 211, 175);
+  border-radius: 20px;
+}
+
+.productImage {
+  margin-top: -100px;
+  margin-right: auto;
+  height: 180px;
+  width: auto;
+}
+
+.productDescription {
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin-top: -5px;
+  margin-left: 6px;
+  margin-right: 2px;
+}
