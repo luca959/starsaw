@@ -17,10 +17,73 @@
 <?php
 include "menu.php";
 ?>
+  <div class="mydiv">
 
+
+    <div>
+      <div class="product">
+          <img class="productImage" src="img/interno/ficus.png" alt="Bonsai di Ficus">
+          <p class="productDescription"><b>Ficus</b> <br>
+          Il genere Ficus appartiene alla famiglia delle piante di gelso. </p>
+     </div>
+     <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+
+    </div>
+
+
+
+  <div>
+      <div class="product">
+          <img class="productImage" src="img/interno/sageretia.png" alt="Bonsai di Sageretia">
+          <p class="productDescription"><b>Sageretia</b> <br>
+          La Sageretia è una pianta sempreverde tropicale, originaria della Cina. </p>
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+  </div>
+
+  <div>
+      <div class="product">
+      <img class="productImage" src="img/interno/piangente.png" alt="Fico Piangente">
+          <p class="productDescription"><b>Ficus Piangente</b> <br>
+         Il Ficus Piangente è la pianta piu' venduta al mondo, originaria dell'India. </p>
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+</div>
+
+
+<div>
+      <div class="product">
+        <img class="productImage" src="img/interno/pino.png" alt="Pino Nero">
+           <p class="productDescription"><b>Pino Nero</b> <br>
+           Il pino nero è un albero appartenente alla famiglia delle Pinaceae. </p>
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+</div>
+
+<div>
+      <div class="product">
+        <img class="productImage" src="img/interno/pinon2.png" alt="Pino">
+           <p class="productDescription"><b>Pino</b> <br>
+           I pini sono conifere resinose con aghi in ciuffi da due a cinque aghi.</p>
+      </div>
+      <div class="button1">
+        <p style="text-align: center;" >Aggiungi al Carello</p>
+     </div>
+</div>
+
+
+
+  </div>
 <?php
 include "footer.php";
-
 ?>
 </body>
 </html>

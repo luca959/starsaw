@@ -20,7 +20,7 @@ include "menu.php";
 
     <div class="mydiv">
 
-        <img id="image" src="img/home.jpg" alt="">
+        <img id="image" src="img/home/home.jpg" alt="">
 
         <div id="descrizione">
             <h1>Benvenuti su Bonshop</h1>
@@ -32,26 +32,22 @@ include "menu.php";
             </p>
 
         </div>
- 
+
         <div class="menu">
+
             <div id="interno" onclick="int()">
                 <h1>Bonsai da interno</h1>
             </div>
-      
+
             <div id="esterno" onclick="est()">
-           
                 <h1> Bonsai da esterno </h1>
-          
             </div>
-          
+
             <div id="guida" onclick="guid()">
                 <h1>Guida</h1>
             </div>
+
         </div>
-
-
-
-
     </div>
 
 <?php

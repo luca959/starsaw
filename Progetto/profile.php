@@ -48,11 +48,15 @@ echo "
             <i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
             <input type='password' class='no-outline'  id='confirm' name='confirm' placeholder='Confirm password' ><br>
 
-            <input type='submit' value='Submit'>
+            <div id='updateButtons'>
+                <div>Modifica Password</div>
+                <input type='submit' value='Submit'>
+            </div>
 
         </form>
     </div>
-</div>";
+</div>"
+;
 
 //mysqli_free_result($res);
 mysqli_close($con);

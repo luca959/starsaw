@@ -16,7 +16,7 @@ include 'menu.php'
 <div class="mydiv">
    <div>
     <h1 class = "center">Registrati</h1>
-    <form id="myform" method="POST" name="registrazione">
+    <form id="myform" method="POST" name="registrazione" onsubmit="return controllo()">
 
     <i class="fa fa-user" style="font-size:13px;color:rgba(65, 65, 65, 1.0)"></i>
     <input type="text" class="inputHover" name="firstname" placeholder="Nome" required><br>
@@ -34,7 +34,7 @@ include 'menu.php'
     <input type="password" class="inputHover"  name="confirm" placeholder="Conferma password" required><br>
     <p id="control" style="color:red"></p>
 
-    <input type="submit" value="Invia" onClick="controllo()">
+    <input type="submit" id="invia" value="Invia">
 
    </form>
   </div>

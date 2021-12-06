@@ -1,8 +1,19 @@
+var password = document.registrazione.pass.value;
+var confirm = document.registrazione.confirm.value;
+
+
 function controllo() {
     var password = document.registrazione.pass.value;
+    var confirm = document.registrazione.confirm.value;
      
     if ((password.length < 6)) {
         document.getElementById("control").innerHTML="La password non può essere minore di 6 caratteri";
+        document.registrazione.pass.focus();
+        return false;
+    }
+
+    if ((password!=confirm)) {
+        document.getElementById("control").innerHTML="Le password non coincidono";
         document.registrazione.pass.focus();
         return false;
     }
@@ -11,6 +22,7 @@ function controllo() {
         document.registrazione.submit();
     }
 }
+
 function int(){
     window.location="shopint.php";
 }
