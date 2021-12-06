@@ -4,7 +4,7 @@ if (!isset($_SESSION['email'])) {
     echo '
 <nav>
   <div id="logo">
-      <a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
+      <a href="index.php"><img src="img/home/logo.jpg" alt="logo"></a>
   </div>
 
   <div id="buttons">
@@ -19,7 +19,7 @@ if (!isset($_SESSION['email'])) {
     echo '
 <nav>
   <div id="logo">
-     <a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
+     <a href="index.php"><img src="img/home/logo.jpg" alt="logo"></a>
   </div>
 
   <div id="buttons">
