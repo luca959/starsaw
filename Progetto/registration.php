@@ -25,15 +25,15 @@ include 'menu.php'
     <input type="text" class="inputHover" name="lastname" placeholder="Cognome" required><br>
 
     <i class="fa fa-envelope" style="font-size:9px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="email" class="inputHover"  name="email" placeholder="E-mail" required><br>
+    <input type="email" class="inputHover"  name="email" id="email" onchange="verifica('checkmail.php')" placeholder="E-mail" required><br>
 
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="password" class="inputHover" name="pass" placeholder="Password" required><br>
+    <input type="password" class="inputHover" name="pass" id="password" placeholder="Password" required><br>
 
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
-    <input type="password" class="inputHover"  name="confirm" placeholder="Conferma password" required><br>
+    <input type="password" class="inputHover"  name="confirm" id="confirm" placeholder="Conferma password" required><br>
     <p id="control" style="color:red"></p>
-
+    <p id="emailcontrol" style="color:red"></p>
     <input type="submit" id="invia" value="Invia">
 
    </form>
