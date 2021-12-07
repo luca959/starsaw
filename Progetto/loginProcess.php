@@ -49,7 +49,7 @@ if (password_verify($pass, $res["pass"])) {
 
 } else {
     echo "<h1 class = 'center'> Utente o password errati </h1>";
-    header("Refresh:3; url=index.php");
+    header("Refresh:3; url=login.php");
 
 }
 ?>

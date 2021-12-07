@@ -32,7 +32,7 @@ if (mysqli_num_rows($res) == 0) { //se non c'è lo aggiungo (eseguendo la quesry
 }
 
 mysqli_close($con); //chiudo la connessione
-header("Refresh:2; url=registration.php");
+header("Refresh:2; url=login.php");
 include "footer.php";
 
 ?>
