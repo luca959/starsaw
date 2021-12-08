@@ -33,7 +33,7 @@ include 'menu.php'
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
     <input type="password" class="inputHover"  name="confirm" id="confirm" placeholder="Conferma password" required><br>
     <p id="control" style="color:red"></p>
-    <p id="emailcontrol" style="color:red"></p>
+    <p id="emailControl" style="color:red"></p>
     <input type="submit" id="invia" value="Invia">
 
    </form>
