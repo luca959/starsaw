@@ -26,7 +26,7 @@ include "menu.php";
           <p class="productDescription"><b>Ficus</b> <br>
           Il genere Ficus appartiene alla famiglia delle piante di gelso. </p>
      </div>
-     <div class="button1">
+     <div class="button1" onclick="add_cart()">
         <p style="text-align: center;" >Aggiungi al Carello</p>
      </div>
 

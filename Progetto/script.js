@@ -1,8 +1,19 @@
 function controllo() {
     var password = document.registrazione.pass.value;
+    var confirm= document.getElementById("confirm").value;
+
      mail=document.getElementById("emailcontrol").innerHTML;
-    if (password.length < 6) {
+    if (password.length < 6 || confirm.lenght <6) {
         document.getElementById("control").innerHTML="La password non può essere minore di 6 caratteri";
+        document.registrazione.pass.focus();
+        return false;
+    }
+    else if( password.length >6 && confirm.lengt>6 ){
+        document.getElementById("control").innerHTML="";
+
+    }
+    else if(password != confirm){
+        document.getElementById("control").innerHTML="La password non corrispondono";
         document.registrazione.pass.focus();
         return false;
     }
@@ -13,6 +24,7 @@ function controllo() {
 
     }
     else {
+        document.getElementById("control").innerHTML="";
         document.registrazione.action = "registrationProcess.php";
         document.registrazione.submit();
     }
@@ -44,6 +56,12 @@ function verifica(url){
         });
 }
 
+
+/*--------- ADD CART ---------- */
+
+
+
+/*--------- ADD CART ---------- */
 function int(){
     window.location="shopint.php";
 }
