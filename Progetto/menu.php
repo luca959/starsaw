@@ -3,11 +3,16 @@ session_start();
 if (!isset($_SESSION['email'])) {
     echo '
 <nav>
-  <div id="logo">
-      <a href="index.php"><img src="img/home/logo.jpg" alt="logo"></a>
-  </div>
+    <div id="logo">
+        <a href="index.php"><img src="img/home/logo.jpg" alt="logo"></a>
+    </div>
 
-  <div id="buttons">
+    <form class= "mydiv" id="ricerca">
+            <input type="text" name="ricerca" placeholder="Cerca per nome"><br>
+            <input type="submit" id="tastoRicerca" value="Cerca">
+    </form>
+
+  <div class="buttons">
       <a href="index.php">Home</a>
       <a href="#">Carrello</a>
       <a href="login.php">Accedi</a>
@@ -22,7 +27,7 @@ if (!isset($_SESSION['email'])) {
      <a href="index.php"><img src="img/home/logo.jpg" alt="logo"></a>
   </div>
 
-  <div id="buttons">
+  <div class="buttons">
       <a href="index.php">Home</a>
       <a href="#">Carrello</a>
       <a href="profile.php">Profilo</a>

@@ -18,10 +18,8 @@ nav {
 }
 
 #logo {
-  /*border-style: solid;
-  border-width: 3px;
-  border-color: black;*/
   width: 20%;
+  margin-right: 20px;
 }
 
 footer {
@@ -93,21 +91,21 @@ footer p {
   padding: 1%;
 }
 
-#buttons {
-  width: 80%;
+.buttons {
+  width: 45%;
 }
 
-#buttons > a {
+.buttons > a {
   text-decoration: none;
   color: white;
   padding: 14px;
 }
 
-#buttons > a:hover {
+.buttons > a:hover {
   background-color: rgba(60, 143, 114, 0.993);
 }
 
-#buttons {
+.buttons {
   margin-top: auto;
   margin-bottom: auto;
   text-align: right;
@@ -131,7 +129,7 @@ footer p {
   }
 }
 
-@media (max-width: 449px) {
+@media (max-width: 768px) {
   nav {
     flex-direction: column;
   }
@@ -139,20 +137,19 @@ footer p {
     width: 100%;
     text-align: center;
   }
-  #buttons {
+  .buttons {
+    margin-top: 3px;
+    margin-bottom: 3px;
     width: 100%;
     text-align: center;
   }
-  #image {
-    margin-top: 93px;
-  }
-  #buttons > a {
-    text-decoration: none;
-    color: white;
-    padding-bottom: 0%;
+  .buttons > a {
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 6px;
+  }
+  #barraRicerca {
+    max-width: 60%;
   }
 }
 
@@ -167,8 +164,7 @@ footer p {
   width: 100%;
   text-align: center;
 }
-
-input[type="text"],
+#myform > input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 280px;
@@ -188,7 +184,7 @@ input[type="password"] {
   background-color: rgba(249, 246, 239, 0.5);
 }
 
-input[type="submit"],
+#myform > input[type="submit"],
 form > div > div {
   width: 45%;
   height: 30px;
@@ -250,4 +246,33 @@ form > div > div {
   background-color: rgb(139, 202, 137);
   transform: scale(1.05);
   cursor: pointer;
+}
+
+#ricerca {
+  width: 50%;
+}
+
+#ricerca > input[type="text"] {
+  border: none;
+  width: 85%;
+  text-align: left;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+}
+
+#testoRicerca {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: 4px;
+}
+
+#ricerca > input[type="submit"] {
+  border: none;
+  width: 20%;
+  max-width: 60px;
+  background-color: rgb(80, 185, 149);
+  text-align: center;
+  color: white;
+  border-radius: 15px;
 }
