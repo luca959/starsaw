@@ -21,7 +21,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 $select_query = "SELECT * FROM utenti WHERE email='" . $_SESSION['email'] . "'";
 $result = mysqli_query($con, $select_query);
 
-$res = mysqli_fetch_assoc($result); //eseguo la query per vedere se c'è già un utente con quella mail
+$res = mysqli_fetch_assoc($result); 
 
 $firstname = $res['firstname']; //prendo i valori dal risultato della query
 $lastname = $res['lastname'];

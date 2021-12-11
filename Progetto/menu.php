@@ -7,8 +7,8 @@ if (!isset($_SESSION['email'])) {
         <a href="index.php"><img src="img/home/logo.jpg" alt="logo"></a>
     </div>
 
-    <form class= "mydiv" id="ricerca">
-        <input type="text" name="ricerca" placeholder="Cerca per nome"><br>
+    <form class= "mydiv" id="ricerca" action="search.php" method="GET">
+        <input type="text" name="ricerca" placeholder="Cerca per nome" required><br>
         <input type="submit" id="tastoRicerca" value="Cerca">
     </form>
 
