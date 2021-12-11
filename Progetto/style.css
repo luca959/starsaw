@@ -276,3 +276,18 @@ form > div > div {
   color: white;
   border-radius: 15px;
 }
+
+.prezzo{
+  font-weight: bold;
+}
+
+.number_items{
+  border:1px solid  rgb(43, 106, 84);
+  border-radius: 5%;
+  width: 25%;
+  margin: 5%;
+}
+.prezzo,.number_items{
+  display: inline;
+
+}
