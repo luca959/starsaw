@@ -22,9 +22,9 @@ include "menu.php";
 
     <div>
       <div class="product">
-          <img class="productImage" src="img/interno/ficus.png" alt="Bonsai di Ficus">
-          <p class="productDescription"><b>Ficus</b> <br>
-          Il genere Ficus appartiene alla famiglia delle piante di gelso. </p>
+          <img class="productImage" src="img/esterno/sageretia.png" alt="Sageretia Theezans">
+          <p class="productDescription"><strong>Sageretia Theezans</strong> <br>
+          La Sageretia è una pianta sempreverde tropicale,originaria della Cina </p>
      </div>
      <p class="prezzo">Prezzo: 10$   ,    Quantità:</p><input type="number" class="number_items" name="quantita" id="quantita1" min="0" value="0">
      <div class="button1" onclick="add_cart()">
@@ -35,9 +35,9 @@ include "menu.php";
 
   <div>
       <div class="product">
-          <img class="productImage" src="img/interno/sageretia.png" alt="Bonsai di Sageretia">
-          <p class="productDescription"><b>Sageretia</b> <br>
-          La Sageretia è una pianta sempreverde tropicale, originaria della Cina. </p>
+          <img class="productImage" src="img/esterno/carmona.png" alt="Carmona">
+          <p class="productDescription"><strong>Carmona</strong> <br>
+          La carmona è un sempreverde tropicale, detta albero del tè</p>
       </div>
       <p class="prezzo">Prezzo: 15$   ,    Quantità:</p><input type="number"class="number_items" name="quantita" id="quantita2" min="0" value="0">
       <div class="button1">
@@ -47,9 +47,9 @@ include "menu.php";
 
   <div>
       <div class="product">
-      <img class="productImage" src="img/interno/piangente.png" alt="Fico Piangente">
-          <p class="productDescription"><b>Ficus Piangente</b> <br>
-         Il Ficus Piangente è la pianta piu' venduta al mondo, originaria dell'India. </p>
+      <img class="productImage" src="img/esterno/frassino.png" alt="Frassino">
+          <p class="productDescription"><strong>Frassino</strong> <br>
+          Il Frassino è un bonsai dall'aspetto elegante e delicato</p>
       </div>
       <p class="prezzo">Prezzo: 20$   ,    Quantità:</p><input type="number" class="number_items" name="quantita" id="quantita3" min="0" value="0">
       <div class="button1">
@@ -60,9 +60,9 @@ include "menu.php";
 
 <div>
       <div class="product">
-        <img class="productImage" src="img/interno/pino.png" alt="Pino Nero">
-           <p class="productDescription"><b>Pino Nero</b> <br>
-           Il pino nero è un albero appartenente alla famiglia delle Pinaceae. </p>
+        <img class="productImage" src="img/esterno/melograno.png" alt="Melograno">
+           <p class="productDescription"><strong>Melograno</strong> <br>
+           Originario del Mediterraneo e dell'Asia,scelta popolare nel Bonsai. </p>
       </div>
       <p class="prezzo">Prezzo: 25$   ,    Quantità:</p><input type="number"class="number_items" name="quantita" id="quantita4" min="0" value="0">
       <div class="button1">
@@ -72,11 +72,11 @@ include "menu.php";
 
 <div>
       <div class="product">
-        <img class="productImage" src="img/interno/pinon2.png" alt="Pino">
-           <p class="productDescription"><b>Pino</b> <br>
-           I pini sono conifere resinose con aghi in ciuffi da due a cinque aghi.</p>
+        <img class="productImage" src="img/esterno/acero.png" alt="Acero Giapponese">
+           <p class="productDescription"><strong>Acero Giapponese</strong> <br>
+           L'acero giapponese è un bonsai da esterno tollera temperature al di sotto di 0°C.</p>
       </div>
-      <p class="prezzo">Prezzo: 10$   ,    Quantità:</p> <input type="number" class="number_items" name="quantita" id="quantita5" min="0" value="0">
+      <p class="prezzo">Prezzo: 30$   ,    Quantità:</p> <input type="number" class="number_items" name="quantita" id="quantita5" min="0" value="0">
       <div class="button1">
         <p style="text-align: center;" >Aggiungi al Carello</p>
      </div>
