@@ -34,7 +34,7 @@ include 'menu.php'
     <input type="password" class="inputHover"  name="confirm" id="confirm" placeholder="Conferma password" required><br>
     <p id="control" style="color:red"></p>
     <p id="emailControl" style="color:red"></p>
-    <input type="submit" id="invia" value="Invia">
+    <input type="submit" id="submit" value="Invia">
 
    </form>
   </div>

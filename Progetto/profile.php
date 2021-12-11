@@ -49,8 +49,8 @@ echo "
             <input type='password' class='no-outline'  id='confirm' name='confirm' placeholder='Confirm password' ><br>
 
             <div id='updateButtons'>
-                <div>Modifica Password</div>
-                <input type='submit' value='Submit'>
+                <div id='submit'>Modifica Password</div>
+                <input type='submit' id='submit' value='Submit'>
             </div>
 
         </form>

@@ -23,7 +23,7 @@ include 'menu.php'
     <i class="fa fa-unlock-alt" style="font-size:14px;color:rgba(65, 65, 65, 1.0)"></i>
     <input type="password" class="inputHover" id="pass" name="pass" placeholder="Password" required><br>
    <p id="emailControl" style="color:red"></p>
-    <input type="submit" value="Invia">
+    <input id="submit" type="submit" value="Invia">
 
    </form>
   </div>

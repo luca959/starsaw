@@ -8,8 +8,8 @@ if (!isset($_SESSION['email'])) {
     </div>
 
     <form class= "mydiv" id="ricerca">
-            <input type="text" name="ricerca" placeholder="Cerca per nome"><br>
-            <input type="submit" id="tastoRicerca" value="Cerca">
+        <input type="text" name="ricerca" placeholder="Cerca per nome"><br>
+        <input type="submit" id="tastoRicerca" value="Cerca">
     </form>
 
   <div class="buttons">
@@ -26,6 +26,11 @@ if (!isset($_SESSION['email'])) {
   <div id="logo">
      <a href="index.php"><img src="img/home/logo.jpg" alt="logo"></a>
   </div>
+
+    <form class= "mydiv" id="ricerca">
+        <input type="text" name="ricerca" placeholder="Cerca per nome"><br>
+        <input type="submit" id="tastoRicerca" value="Cerca">
+    </form>
 
   <div class="buttons">
       <a href="index.php">Home</a>
