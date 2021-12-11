@@ -17,7 +17,7 @@
 <?php
 include "menu.php";
 ?>
-  <div class="mydiv">
+ <div class="mydiv"> 
 
 
     <div>
@@ -26,13 +26,12 @@ include "menu.php";
           <p class="productDescription"><b>Ficus</b> <br>
           Il genere Ficus appartiene alla famiglia delle piante di gelso. </p>
      </div>
+     <p class="prezzo">Prezzo: 10$   ,    Quantità:</p><input type="number" class="number_items" name="quantita" id="quantita1" min="0" value="0">
      <div class="button1" onclick="add_cart()">
         <p style="text-align: center;" >Aggiungi al Carello</p>
      </div>
 
     </div>
-
-
 
   <div>
       <div class="product">
@@ -40,6 +39,7 @@ include "menu.php";
           <p class="productDescription"><b>Sageretia</b> <br>
           La Sageretia è una pianta sempreverde tropicale, originaria della Cina. </p>
       </div>
+      <p class="prezzo">Prezzo: 15$   ,    Quantità:</p><input type="number"class="number_items" name="quantita" id="quantita2" min="0" value="0">
       <div class="button1">
         <p style="text-align: center;" >Aggiungi al Carello</p>
      </div>
@@ -51,6 +51,7 @@ include "menu.php";
           <p class="productDescription"><b>Ficus Piangente</b> <br>
          Il Ficus Piangente è la pianta piu' venduta al mondo, originaria dell'India. </p>
       </div>
+      <p class="prezzo">Prezzo: 20$   ,    Quantità:</p><input type="number" class="number_items" name="quantita" id="quantita3" min="0" value="0">
       <div class="button1">
         <p style="text-align: center;" >Aggiungi al Carello</p>
      </div>
@@ -63,6 +64,7 @@ include "menu.php";
            <p class="productDescription"><b>Pino Nero</b> <br>
            Il pino nero è un albero appartenente alla famiglia delle Pinaceae. </p>
       </div>
+      <p class="prezzo">Prezzo: 25$   ,    Quantità:</p><input type="number"class="number_items" name="quantita" id="quantita4" min="0" value="0">
       <div class="button1">
         <p style="text-align: center;" >Aggiungi al Carello</p>
      </div>
@@ -74,6 +76,7 @@ include "menu.php";
            <p class="productDescription"><b>Pino</b> <br>
            I pini sono conifere resinose con aghi in ciuffi da due a cinque aghi.</p>
       </div>
+      <p class="prezzo">Prezzo: 10$   ,    Quantità:</p> <input type="number" class="number_items" name="quantita" id="quantita5" min="0" value="0">
       <div class="button1">
         <p style="text-align: center;" >Aggiungi al Carello</p>
      </div>
