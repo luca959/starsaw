@@ -14,77 +14,29 @@
 </head>
 
 <body>
+<div class="mydiv">
 <?php
 include "menu.php";
+
+include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
+
+$select_query = "SELECT * FROM items WHERE esposizione = '1'";
+$res = mysqli_query($con, $select_query);
+while ($row = mysqli_fetch_assoc($res)) {
+    echo '
+         <div>
+         <div class="product">
+               <img class="productImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
+               <p class="productDescription"><strong>' . $row['nome'] . '</strong> <br>' . $row['descrizione'] . ' </p>
+         </div>
+         <p class="prezzo">Prezzo:' . $row['prezzo'] . ',Quantità:</p><input type="number" class="number_items" name="quantita" id="quantita1" min="0" value="0">
+         <div class="button1" onclick="add_cart()">
+            <p style="text-align: center;" >Aggiungi al Carello</p>
+         </div>
+      </div>';
+}
 ?>
- <div class="mydiv">
-
-
-    <div>
-      <div class="product">
-          <img class="productImage" src="img/esterno/sageretia.png" alt="Sageretia Theezans">
-          <p class="productDescription"><strong>Sageretia Theezans</strong> <br>
-          La Sageretia è una pianta sempreverde tropicale,originaria della Cina </p>
-     </div>
-     <p class="prezzo">Prezzo: 10$   ,    Quantità:</p><input type="number" class="number_items" name="quantita" id="quantita1" min="0" value="0">
-     <div class="button1" onclick="add_cart()">
-        <p style="text-align: center;" >Aggiungi al Carello</p>
-     </div>
-
-    </div>
-
-  <div>
-      <div class="product">
-          <img class="productImage" src="img/esterno/carmona.png" alt="Carmona">
-          <p class="productDescription"><strong>Carmona</strong> <br>
-          La carmona è un sempreverde tropicale, detta albero del tè</p>
-      </div>
-      <p class="prezzo">Prezzo: 15$   ,    Quantità:</p><input type="number"class="number_items" name="quantita" id="quantita2" min="0" value="0">
-      <div class="button1">
-        <p style="text-align: center;" >Aggiungi al Carello</p>
-     </div>
-  </div>
-
-  <div>
-      <div class="product">
-      <img class="productImage" src="img/esterno/frassino.png" alt="Frassino">
-          <p class="productDescription"><strong>Frassino</strong> <br>
-          Il Frassino è un bonsai dall'aspetto elegante e delicato</p>
-      </div>
-      <p class="prezzo">Prezzo: 20$   ,    Quantità:</p><input type="number" class="number_items" name="quantita" id="quantita3" min="0" value="0">
-      <div class="button1">
-        <p style="text-align: center;" >Aggiungi al Carello</p>
-     </div>
 </div>
-
-
-<div>
-      <div class="product">
-        <img class="productImage" src="img/esterno/melograno.png" alt="Melograno">
-           <p class="productDescription"><strong>Melograno</strong> <br>
-           Originario del Mediterraneo e dell'Asia,scelta popolare nel Bonsai. </p>
-      </div>
-      <p class="prezzo">Prezzo: 25$   ,    Quantità:</p><input type="number"class="number_items" name="quantita" id="quantita4" min="0" value="0">
-      <div class="button1">
-        <p style="text-align: center;" >Aggiungi al Carello</p>
-     </div>
-</div>
-
-<div>
-      <div class="product">
-        <img class="productImage" src="img/esterno/acero.png" alt="Acero Giapponese">
-           <p class="productDescription"><strong>Acero Giapponese</strong> <br>
-           L'acero giapponese è un bonsai da esterno tollera temperature al di sotto di 0°C.</p>
-      </div>
-      <p class="prezzo">Prezzo: 30$   ,    Quantità:</p> <input type="number" class="number_items" name="quantita" id="quantita5" min="0" value="0">
-      <div class="button1">
-        <p style="text-align: center;" >Aggiungi al Carello</p>
-     </div>
-</div>
-
-
-
-  </div>
 <?php
 include "footer.php";
 ?>
