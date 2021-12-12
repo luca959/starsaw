@@ -45,10 +45,12 @@ if (password_verify($pass, $res["pass"])) {
     $_SESSION['id'] = session_id();
 
     echo "<h1 class = 'center'> Benvenuto " . $res['firstname'] . "</h1>";
+    mysqli_close($con);
     header("Refresh:3; url=index.php");
 
 } else {
     echo "<h1 class = 'center'> Utente o password errati </h1>";
+    mysqli_close($con);
     header("Refresh:3; url=login.php");
 
 }

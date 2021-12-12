@@ -1,21 +1,25 @@
-function controllo() {
-    var password = document.getElementById("password").value;
-    var confirm = document.getElementById("confirm").value;
-    errorValue = document.getElementById("emailControl").innerHTML;
+check_mail=false;
 
-    if (password.length < 6) {
+function pwd_check(){
+    var password = document.getElementById("pass").value;
+    var confirm = document.getElementById("confirm").value;
+    if(password.length>=6 && password==confirm){
+        document.getElementById("control").innerHTML="";
+    }
+}
+function controllo() {
+    var password = document.getElementById("pass").value;
+    var confirm = document.getElementById("confirm").value;
+    if (password.length <= 6) {
         document.getElementById("control").innerHTML="La password non può essere minore di 6 caratteri";
-        document.registrazione.pass.focus();
         return false;
     }
     else if(password != confirm){
         document.getElementById("control").innerHTML="La password non corrispondono";
-        document.registrazione.pass.focus();
         return false;
     }
-    else if(errorValue!=""){
-        //document.getElementById("emailControlRegister").innerHTML="La seguente mail è già associata ad un'altro account";
-        document.getElementById("emailControl").focus();
+    else if(!check_mail){
+        pwd_check();
         return false;
 
     }
@@ -62,15 +66,14 @@ function verifica(url){
          /* code for result */
         if(result==="ko" && filename==="registration.php"){
             document.getElementById("emailControl").innerHTML="La seguente mail è già associata ad un'altro account";
+            check_mail=false;
         }
         else if (result==="ok" && filename==="login.php"){
                 document.getElementById("emailControl").innerHTML="La seguente mail non è associata a nessun account";
          }
          else{
-            if(filename==="registration.php")
-                document.getElementById("emailControl").innerHTML="";
-            else
                  document.getElementById("emailControl").innerHTML="";
+                 check_mail=true;
          }
         });
 }

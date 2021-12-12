@@ -43,6 +43,7 @@ if ($res == 1) { //se l'update è andato a buon fine res =1 altrimenti è divers
     echo "<h1 class='center'> Impossibile effettuare i cambiamenti </h1>";
     header("Refresh:3; url=index.php");
 }
+mysqli_close($con);
 include "footer.php";
 ?>
 
