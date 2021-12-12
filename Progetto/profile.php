@@ -4,6 +4,7 @@
     <title>Bonshop: Profilo</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
 </head>
 
 
@@ -21,7 +22,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 $select_query = "SELECT * FROM utenti WHERE email='" . $_SESSION['email'] . "'";
 $result = mysqli_query($con, $select_query);
 
-$res = mysqli_fetch_assoc($result); 
+$res = mysqli_fetch_assoc($result);
 
 $firstname = $res['firstname']; //prendo i valori dal risultato della query
 $lastname = $res['lastname'];
@@ -42,9 +43,15 @@ echo "
             <i class='fa fa-envelope' style='font-size:9px;color:rgba(65, 65, 65, 1.0)'></i>
             <input type='email' id='email' class='no-outline'  name='email' value='$email' required><br>
 
+            <i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
+            <input type='password' class='no-outline' id='pass' name='pass' placeholder='Password' ><br>
+
+            <i class='fa fa-unlock-alt' style='font-size:14px;color:rgba(65, 65, 65, 1.0)'></i>
+            <input type='password' class='no-outline'  id='confirm' name='confirm' placeholder='Confirm password' ><br>
+
             <div id='updateButtons'>
-                <input type='button' class='submit' value='Modifica Password'>
-                <input type='submit' class='submit' value='Submit'>
+                <div id='submit' onclick='pass()'>Modifica Password</div>
+                <input type='submit' id='submit' value='Submit'>
             </div>
 
         </form>
