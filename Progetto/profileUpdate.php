@@ -22,17 +22,8 @@ $fname = mysqli_real_escape_string($con, trim($_POST["firstname"]));
 $lname = mysqli_real_escape_string($con, trim($_POST["lastname"]));
 $email = mysqli_real_escape_string($con, trim($_POST["email"]));
 
-if ($_POST['pass'] == "") {
-    $update_query = "UPDATE utenti SET firstname='" . $fname . "', lastname='" . $lname . "', email='" . $email . "'WHERE email='" . $_SESSION['email'] . "'";
-} else {
-    $pass = trim($_POST["pass"]);
-    $confirm = trim($_POST["confirm"]);
-    if ($pass != $confirm) {
-        die("<h1 class = 'center'>Le password non coincidono</h1>");
-    }
-    $pass = password_hash($pass, PASSWORD_DEFAULT);
-    $update_query = "UPDATE utenti SET firstname='" . $fname . "', lastname='" . $lname . "', email='" . $email . "', pass='" . $pass . "'WHERE email='" . $_SESSION['email'] . "'";
-}
+$update_query = "UPDATE utenti SET firstname='" . $fname . "', lastname='" . $lname . "', email='" . $email . "'WHERE email='" . $_SESSION['email'] . "'";
+
 $res = mysqli_query($con, $update_query); //eseguo la query
 
 if ($res == 1) { //se l'update è andato a buon fine res =1 altrimenti è diverso da 1
@@ -43,7 +34,6 @@ if ($res == 1) { //se l'update è andato a buon fine res =1 altrimenti è divers
     echo "<h1 class='center'> Impossibile effettuare i cambiamenti </h1>";
     header("Refresh:3; url=index.php");
 }
-mysqli_close($con);
 include "footer.php";
 ?>
 
