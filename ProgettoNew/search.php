@@ -24,7 +24,7 @@ if (empty($_GET['ricerca'])) { //controllo se il campo è vuoto
     header("Refresh:2; url=index.php");
 
 } else {
-    include 'connection.php'; //Mi connetto al DB
+    include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
     $search = mysqli_real_escape_string($con, trim($_GET["ricerca"])); //sanity check
     $select_query = "SELECT * FROM items WHERE nome LIKE '%" . $search . "%'"; //query per vedere se c'è già un utente con quella mail
     $res = mysqli_query($con, $select_query); //eseguo la query per vedere se c'è già un utente con quella mail
