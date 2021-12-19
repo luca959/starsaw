@@ -24,18 +24,16 @@ $select_query = "SELECT * FROM items WHERE esposizione = '1'";
 $res = mysqli_query($con, $select_query);
 while ($row = mysqli_fetch_assoc($res)) {
     echo '
-         <div>
-         <div class="product">
-               <img class="productImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
-               <p class="productDescription"><strong>' . $row['nome'] . '</strong> <br>' . $row['descrizione'] . ' </p>
-         </div>
-         <p class="prezzo">Prezzo:' . $row['prezzo'] . '</p>
+        <div>
+        <div class="product">
+        <form  method="GET" onsubmit="return save()">
+                <img class="productImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
+                <input class="productName" type="text" readonly value="' . $row['nome'] . '" name="productName"> ' . $row['nome'] . ' <br>' . $row['descrizione'] . '
+            </div>
+            <p class="prezzo">Prezzo:' . $row['prezzo'] . '</p>
 
-
-        <form action="cookie.php" method="GET">
             Quantità: <input type="number" class="number_items" name="productQuantity" min="0" value="0">
-            <input type="text" value="' . $row['nome'] . '" name="productName">
-            <input type="submit" class="button1" value="Cerca">
+            <input type="submit" class="button1" value="Aggiungi al carrello">
         </form>
 
 

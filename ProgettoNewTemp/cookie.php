@@ -12,8 +12,13 @@
 <?php
 $name = $_GET['productName'];
 $quantity = $_GET['productQuantity'];
-setcookie("product", $name . "|" . $quantity); //imposto il cookie
-
+$product = array($name => $quantity);
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = $product;
+} else {
+    $_SESSION['cart'] += $product;
+}
+echo ($product);
 ?>
 
 

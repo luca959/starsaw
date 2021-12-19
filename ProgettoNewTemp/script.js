@@ -88,10 +88,6 @@ function verifica(url){
 
 /*--------- ADD CART ---------- */
 
-function addToCart(elem){
-    alert(document.getElementById("productName"));
-}
-
 /*--------- ADD CART ---------- */
 function int(){
     window.location="shopint.php";
@@ -104,6 +100,14 @@ function guid(){
 }
 function pass(){
     window.location="passwordUpdate.php";
+}
+
+function save(){
+    var elements = document.getElementsByName("productName").value;
+    alert(elements);
+    //localStorage.setItem("1", elements);
+    
+    
 }
 
 
