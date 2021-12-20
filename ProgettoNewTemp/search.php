@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonshop: Bonsai da Interno</title>
+    <title>Bonshop: Carrello</title>
     <link rel="icon" type="image/x-icon" href="/Progetto/img/home/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -29,20 +29,7 @@ if (empty($_GET['ricerca'])) { //controllo se il campo è vuoto
     $search = mysqli_real_escape_string($con, trim($_GET["ricerca"])); //sanity check
     $select_query = "SELECT * FROM items WHERE nome LIKE '%" . $search . "%'";
     $res = mysqli_query($con, $select_query);
-    while ($row = mysqli_fetch_assoc($res)) {
-        echo '<div>
-        <div class="product">
-            <img class="productImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
-            <p class="productDescription"><strong>' . $row['nome'] . '</strong> <br>' . $row['descrizione'] . ' </p>
-       </div>
-       <p class="prezzo">Prezzo: ' . $row['prezzo'] . ',Quantità:</p><input type="number" class="number_items" name="quantita" min="0" value="0">
-       <div class="button1" onclick="addToCart("' . $row['nome'] . '")">
-          <p style="text-align: center;" >Aggiungi al Carello</p>
-       </div>
-
-      </div>';
-
-    }
+    include "products.php";
 }
 mysqli_close($con);
 

@@ -27,7 +27,7 @@ $res = mysqli_fetch_assoc($result);
 $firstname = $res['firstname']; //prendo i valori dal risultato della query
 $lastname = $res['lastname'];
 $email = $res['email'];
-
+$function = "checkmail.php";
 echo "
 <div class='mydiv'>
    <div>
@@ -35,23 +35,22 @@ echo "
         <form id='myform' action='profileUpdate.php' method='POST'>
 
             <i class='fa fa-user' style='font-size:13px;color:rgba(65, 65, 65, 1.0)'></i>
-            <input type='text' class='no-outline' id='firstname' name='firstname' value='$firstname' required><br>
+            <input type='text' class='no-outline' id='firstname' name='firstname' value='".$firstname."'  required><br>
 
             <i class='fa fa-user' style='font-size:13px;color:rgba(65, 65, 65, 1.0)'></i>
-            <input type='text' class='no-outline' id='lastname' name='lastname' value='$lastname' required><br>
+            <input type='text' class='no-outline' id='lastname' name='lastname' value='".$lastname."' required><br>
 
             <i class='fa fa-envelope' style='font-size:9px;color:rgba(65, 65, 65, 1.0)'></i>
-            <input type='email' id='email' class='no-outline'  name='email' value='$email' required><br>
-
+            <input type='email' id='email' class='no-outline'  name='email' value='".$email."' required><br>
+            <p style=' color:red' id='emailControl'></p>
             <div id='updateButtons'>
                 <div class='submit' onclick='pass()'>Modifica Password</div>
-                <input type='submit' class='submit' value='Submit'>
+                <input type='submit' class='submit' value='Submit' onclick='value_check()'>
             </div>
 
         </form>
     </div>
-</div>"
-;
+</div>";
 
 //mysqli_free_result($res);
 mysqli_close($con);

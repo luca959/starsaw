@@ -7,26 +7,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonshop: Bonsai da Interno</title>
+    <title>Bonshop: Ricerca</title>
     <link rel="icon" type="image/x-icon" href="/Progetto/img/home/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-
 <body>
-<div class="mydiv">
 <?php
 include "menu.php";
-
 include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 
-$select_query = "SELECT * FROM items WHERE esposizione = '0'";
-$res = mysqli_query($con, $select_query);
-include "products.php";
-?>
-</div>
-<?php
-include "footer.php";
+//$products = $_GET['products'];
+$pieces = explode("!", $_GET['products']);
+foreach ($pieces as $prod) {
+    $elem = explode("|", $prod);
+    $select_query = "SELECT * FROM items WHERE nome = '" . $elem[0] . "'";
+    $res = mysqli_query($con, $select_query);
+    include "products.php";
+}
+
+include "footer.php"
 ?>
 </body>
-</html>

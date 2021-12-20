@@ -22,23 +22,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 
 $select_query = "SELECT * FROM items WHERE esposizione = '1'";
 $res = mysqli_query($con, $select_query);
-while ($row = mysqli_fetch_assoc($res)) {
-    echo '
-        <div>
-        <div class="product">
-        <form  method="GET" onsubmit="return save()">
-                <img class="productImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
-                <input class="productName" type="text" readonly value="' . $row['nome'] . '" name="productName"> ' . $row['nome'] . ' <br>' . $row['descrizione'] . '
-            </div>
-            <p class="prezzo">Prezzo:' . $row['prezzo'] . '</p>
-
-            Quantità: <input type="number" class="number_items" name="productQuantity" min="0" value="0">
-            <input type="submit" class="button1" value="Aggiungi al carrello">
-        </form>
-
-
-        </div>';
-}
+include "products.php";
 ?>
 </div>
 <?php

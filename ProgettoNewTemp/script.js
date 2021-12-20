@@ -102,15 +102,37 @@ function pass(){
     window.location="passwordUpdate.php";
 }
 
-function save(){
-    var elements = document.getElementsByName("productName").value;
-    alert(elements);
-    //localStorage.setItem("1", elements);
-    
-    
+function addToCart(id){
+    var name = document.getElementById("product_"+id).innerHTML;
+    //alert(name);
+    var quantity = document.getElementById("quantity_"+id).value;
+    //alert(quantity);
+    var data = name+"|"+quantity+"!";
+    var old = localStorage.getItem("products");
+    if(old === null) {
+        old = "";
+    }
+    localStorage.setItem("products", old + data); 
 }
 
+function cart(){
+    window.open('cart.php?products='+localStorage.getItem("products"));
+}
 
+function value_check(){
+    email = document.getElementById("email").value;
+    firstname = document.getElementById("firstname").value;
+    lastname = document.getElementById("lastname").value;
+    if(email == "" || firstname =="" || lastname==""){
+        document.getElementById("emailControl").innerHTML="Riempi campi";
+        document.getElementById("myform").addEventListener('submit', function(evt){
+            evt.preventDefault();
+        })
+    }
+    else{
+        document.getElementById("myform").submit();
+    }
+}
 
 
 
