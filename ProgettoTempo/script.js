@@ -180,7 +180,7 @@ function cart(){
 
 
 
-/* FUNZIONE ADD CART */
+/* FUNZIONI CART */
 
 function addToCart(id){
     var name = document.getElementById("product_"+id).innerHTML;
@@ -206,20 +206,18 @@ function merge(old, data, quantity){        //cancello le ripetizione nel carrel
 
 function RemoveToCart(id){
     var name = document.getElementById("product_"+id).innerHTML;
-    alert(name);
     var quantity = document.getElementById("quantity_"+id).innerHTML;
-    alert(quantity);
     var old = localStorage.getItem("products");
-    old=old.replace(name+"|"+quantity+"!", "")
-    alert(old);
-    localStorage.setItem("products",  old); 
+    old=old.replace(name+"|"+parseInt(quantity)+"!", "")
+    localStorage.setItem("products",  old);
+    cart(); 
 }
 
 function clearCar(){
     localStorage.clear();
 }
 
-/* FUNZIONE ADD CART */
+/* FUNZIONI CART */
 
 
 
