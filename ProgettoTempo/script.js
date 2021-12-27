@@ -214,7 +214,26 @@ function RemoveToCart(id){
 }
 
 function clearCar(){
-    localStorage.clear();
+    x=document.getElementById("total_price").innerHTML;
+    if(x !="0"){
+        if('@Session["email"]'!=null){
+            localStorage.clear();
+        }
+        else{
+            document.getElementById("control").innerHTML="Per effettuare gli acquisti bisogna prima autenticarsi";
+            document.getElementById("myform").addEventListener("submit", function(event){
+                event.preventDefault();
+              });
+        }
+        //CONTROLLARE SE SIAMO LOGGATI
+    }
+    else{
+        document.getElementById("control").innerHTML="Il carrello è vuoto";
+        document.getElementById("myform").addEventListener("submit", function(event){
+            event.preventDefault();
+          });
+    }
+   
 }
 
 /* FUNZIONI CART */

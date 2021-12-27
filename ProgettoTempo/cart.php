@@ -10,7 +10,7 @@
     <title>Bonshop: Ricerca</title>
     <link rel="icon" type="image/x-icon" href="/Progetto/img/home/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <?php
@@ -45,9 +45,10 @@ foreach ($pieces as $prod) {
 
 }
 echo '</div>
-    <h1 class="center">Il prezzo totale è: ' . $prezzoTot . '$ </h1>
-        <form class="center" method="GET" action="order.php">
+    <h1 class="center" >Il prezzo totale è:<span id="total_price">' . $prezzoTot . '</span> $ </h1>
+        <form class="center" method="GET" action="order.php" id="myform">
             <input type="submit" class="submit" onclick="clearCar()" value="Procedi all\' ordine" >
+            <p id="control" style="color:red"></p>
         </form>';
 include "footer.php"
 ?>
