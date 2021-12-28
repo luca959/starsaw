@@ -13,13 +13,11 @@
 
 <?php
 include "menu.php";
-if (!isset($_SESSION['email'])) { 
-    echo "<h1 class='center'> Per Poter Effettuare il seguente acquisto , bisogna autenticarsi sul sito</h1>";
-  
-}
-else{
-    echo "<h1 class='center'> Ordine effettuato, sarà spedito il prima possibile</h1>";
-    header("Refresh:2; url=index.php");
+if (!isset($_SESSION['email'])) {
+    echo "<h1 class='center'> Per poter proseguire all'acquisto devi prima effettuare l'accesso</h1>";
+
+} else {
+    echo "<h1 class='center'> Ordine effettuato, sarà spedito il prima possibile.</h1>";
 }
 include "footer.php";
 ?>

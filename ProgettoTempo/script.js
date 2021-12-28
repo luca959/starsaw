@@ -176,6 +176,10 @@ function cart(){
     window.location="cart.php?products="+localStorage.getItem('products');
 }
 
+function index(){
+    window.location="index.php";
+}
+
 /* FUNZIONI LINK */
 
 
