@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonshop: Ricerca</title>
+    <title>Bonshop: Carrello</title>
     <link rel="icon" type="image/x-icon" href="/Progetto/img/home/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
@@ -44,12 +44,16 @@ foreach ($pieces as $prod) {
     }
 
 }
-echo '</div>
-    <h1 class="center" >Il prezzo totale è:<span id="total_price">' . $prezzoTot . '</span> $ </h1>
+?>
+</div>
+<?php
+    echo '<h1 class="center" >Il prezzo totale è:<span id="total_price">' . $prezzoTot . '</span> $ </h1>'
+    ?>
         <form class="center" method="GET" action="order.php" id="myform">
-            <input type="submit" class="submit"  onclick="clearCar()"  value="Procedi all\' ordine" >
+            <input type="submit" class="submit" value="Procedi all' ordine" >
             <p id="control" style="color:red"></p>
         </form>';
+<?php
 include "footer.php"
 ?>
 </body>

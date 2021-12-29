@@ -175,7 +175,9 @@ function guid(){
 function cart(){
     window.location="cart.php?products="+localStorage.getItem('products');
 }
-
+function valutazione(){
+    window.location="valutation.php?products="+localStorage.getItem('products');
+}
 function index(){
     window.location="index.php";
 }
@@ -216,30 +218,37 @@ function RemoveToCart(id){
     localStorage.setItem("products",  old);
     cart(); 
 }
+/*
+function clearCar(url){
+    price=document.getElementById("total_price").innerHTML;
+        fetch(url, {
+        method: "post",
+        headers: { "Content-type": "application/x-www-form-urlencoded" },
+        }).then(function (response) {
+            if(response.status != 200){
+                console.log("problem: "+response.status);
+                return false;
+            }
+            //get the text from the response
+            return response.text();
 
-function clearCar(){
-    x=document.getElementById("total_price").innerHTML;
-    if(x !="0"){
-        if('@Session["email"]'!=null){
-            localStorage.clear();
-        }
-        else{
-            document.getElementById("control").innerHTML="Per effettuare gli acquisti bisogna prima autenticarsi";
+        }).then(function (result) {
+    
+        if(result==="ko" ){
+            document.getElementById("control").innerHTML="Utente non autenticato";
             document.getElementById("myform").addEventListener("submit", function(event){
                 event.preventDefault();
-              });
+            });
+            
         }
-        //CONTROLLARE SE SIAMO LOGGATI
-    }
-    else{
-        document.getElementById("control").innerHTML="Il carrello è vuoto";
-        document.getElementById("myform").addEventListener("submit", function(event){
-            event.preventDefault();
-          });
-    }
-   
-}
+        else{
+            document.getElementById("control").innerHTML="";
 
+        }
+       
+        });
+    }
+*/
 /* FUNZIONI CART */
 
 
