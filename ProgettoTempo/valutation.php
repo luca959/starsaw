@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonshop: Valutazione</title>
+    <title>Bonshop: Carrello</title>
     <link rel="icon" type="image/x-icon" href="/Progetto/img/home/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
@@ -17,7 +17,7 @@
 include "menu.php";
 include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 echo '<div class="mydiv">';
-echo '<form class="center" method="POST" id="myform">'
+//$products = $_GET['products'];
 $pieces = explode("!", $_GET['products']);
 $prezzoTot = 0;
 foreach ($pieces as $prod) {
@@ -27,32 +27,26 @@ foreach ($pieces as $prod) {
     $count = 0;
     while ($row = mysqli_fetch_assoc($res)) {
         echo '
-        <div>
-            <div class="product">
-                <img class="productImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
-                <p class="productName" id = "product_' . $count . '" name="productName">' . $row['nome'] . '</p>
-                <p class="productDescription">' . $row['descrizione'] . '</p>
-            </div>
-            
-            <div class="button1">
-                <p class="center"  > Valuta</p>
-            </div>
+        <div class="productEval">
+                <p class="productEvalName" id = "product_' . $count . '" name="productName">' . $row['nome'] . ' </p>
+                 <img class="productEvalImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
+                 <div class="star">
+                    <i class="fa fa-star fa-x"></i>
+                    <i class="fa fa-star fa-x"></i>
+                    <i class="fa fa-star fa-x"></i>
+                    <i class="fa fa-star fa-x"></i>
+                    <i class="fa fa-star fa-x"></i>
+                </div>
+
         </div>';
         $count++;
         $prezzoTot += $elem[1] * $row['prezzo'];
     }
+
 }
-echo"</form>";
-?>
-</div>
-<?php
-    echo '<h1 class="center" >Il prezzo totale è:<span id="total_price">' . $prezzoTot . '</span> $ </h1>'
-    ?>
-        <form class="center" method="POST" action="order.php" id="myform">
-            <input type="submit" class="submit" value="Procedi all' ordine" >
-            <p id="control" style="color:red"></p>
-        </form>';
-<?php
-include "footer.php"
+
+echo '</div>';
+
+include "footer.php";
 ?>
 </body>
