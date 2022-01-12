@@ -31,11 +31,7 @@ foreach ($pieces as $prod) {
                 <p class="productEvalName" id = "product_' . $count . '" name="productName">' . $row['nome'] . ' </p>
                  <img class="productEvalImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
                  <div class="star">
-                    <i class="fa fa-star fa-x"></i>
-                    <i class="fa fa-star fa-x"></i>
-                    <i class="fa fa-star fa-x"></i>
-                    <i class="fa fa-star fa-x"></i>
-                    <i class="fa fa-star fa-x"></i>
+                    <input type="range" min="1" max="5" value="1">
                 </div>
 
         </div>';

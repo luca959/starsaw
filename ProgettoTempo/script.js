@@ -200,12 +200,12 @@ function addToCart(id){
 }
 
 function merge(old, data, quantity){        //cancello le ripetizione nel carrello di un prodotto
-    str = old.indexOf(data);
+    str = old.indexOf(data);        //restiuisce l'indice do inizia il nome dell'elemento da aggiungere al carrello
     if(str==-1){
         return(old + data+"|"+quantity+"!");
     }       //guardo se nel carrello è già presente quel prodotto
-    str+=data.length+1;     
-    var temp = old[str];        // guardo la sua quantità
+    str+=data.length+1;     // vado a prendere l'indice della quantità
+    var temp = old.slice(str, old.indexOf("!"));        // guardo la sua quantità
     old = old.replace(data+"|"+temp, data+"|"+(parseInt(temp)+parseInt(quantity)));     // aggiorno la quantità
     return old;
 }
