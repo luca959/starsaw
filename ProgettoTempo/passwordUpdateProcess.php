@@ -35,5 +35,3 @@ if ($res == 1) { //se l'update è andato a buon fine res =1 altrimenti è divers
 include "footer.php";
 ?>
 
-</body>
-</html>

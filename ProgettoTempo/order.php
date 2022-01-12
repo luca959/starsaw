@@ -20,13 +20,11 @@ if (!isset($_SESSION['email'])) {
     echo "<h1 class='center'> Ordine effettuato, sarà  spedito il prima possibile. <br>
     Vorresti lasciare una recensione ai prodotti che hai acquistato?</h1>
     <div class='mydiv'>
-    <div class='submit'onclick='valutazione()' >Si</div>
+    <div class='submit' onclick='valutazione()' >Si</div>
     <div class='submit' onclick='index()'>No</div>
     </div>";
-    
+
 }
 include "footer.php";
 ?>
 
-</body>
-</html>

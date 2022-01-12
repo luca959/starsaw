@@ -17,7 +17,7 @@ $_SESSION = array();
 session_destroy();
 //setcookie(session_name(), '', time() - 42000);
 
-header("Refresh:3; url=index.php");
+header("Refresh:2; url=index.php");
 
 ?>
 </body>

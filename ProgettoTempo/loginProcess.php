@@ -60,5 +60,3 @@ if (password_verify($pass, $res["pass"])) {
 include "footer.php";
 
 ?>
-</body>
-</html>

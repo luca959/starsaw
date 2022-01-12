@@ -29,13 +29,10 @@ $res = mysqli_query($con, $update_query); //eseguo la query
 if ($res == 1) { //se l'update è andato a buon fine res=1 altrimenti è diverso da 1
     echo "<h1 class='center'> Cambiamenti effettuati</h1>";
     $_SESSION['email'] = $_POST['email'];
-    header("Refresh:3; url=index.php");
+    header("Refresh:2; url=index.php");
 } else {
     echo "<h1 class='center'> Impossibile effettuare i cambiamenti </h1>";
-    header("Refresh:3; url=update_profile.php");
+    header("Refresh:2; url=update_profile.php");
 }
 include "footer.php";
 ?>
-
-</body>
-</html>

@@ -17,14 +17,15 @@
 include "menu.php";
 include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 echo '<div class="mydiv">';
-//$products = $_GET['products'];
 $pieces = explode("!", $_GET['products']);
 $prezzoTot = 0;
+$count = 0;
+
 foreach ($pieces as $prod) {
     $elem = explode("|", $prod);
     $select_query = "SELECT * FROM items WHERE nome = '" . $elem[0] . "'";
     $res = mysqli_query($con, $select_query);
-    $count = 0;
+
     while ($row = mysqli_fetch_assoc($res)) {
         echo '
         <div>
@@ -35,7 +36,7 @@ foreach ($pieces as $prod) {
             </div>
             <p class="center">Prezzo: ' . $row['prezzo'] . '$, Quantità:</p> <p class="center" id = "quantity_' . $count . '" > ' . $elem[1] . ' </p>
 
-            <div class="button1" onclick="RemoveToCart(' . $count . ')">
+            <div class="button1" onclick="RemoveToCart(' . $count . '); cart()">
                 <p class="center"  >Rimuovi dal Carello</p>
             </div>
         </div>';
@@ -47,8 +48,8 @@ foreach ($pieces as $prod) {
 ?>
 </div>
 <?php
-    echo '<h1 class="center" >Il prezzo totale è:<span id="total_price">' . $prezzoTot . '</span> $ </h1>'
-    ?>
+echo '<h1 class="center" >Il prezzo totale è:<span id="total_price">' . $prezzoTot . '</span> $ </h1>'
+?>
         <form class="center" method="GET" action="order.php" id="myform">
             <input type="submit" class="submit" value="Procedi all' ordine" >
             <p id="control" style="color:red"></p>
@@ -56,4 +57,4 @@ foreach ($pieces as $prod) {
 <?php
 include "footer.php"
 ?>
-</body>
+

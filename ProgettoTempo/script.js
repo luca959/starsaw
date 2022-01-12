@@ -179,11 +179,11 @@ function valutazione(){
     window.location="valutation.php?products="+localStorage.getItem('products');
 }
 function index(){
+    clearCart();
     window.location="index.php";
 }
 
 /* FUNZIONI LINK */
-
 
 
 /* FUNZIONI CART */
@@ -205,7 +205,7 @@ function merge(old, data, quantity){        //cancello le ripetizione nel carrel
         return(old + data+"|"+quantity+"!");
     }       //guardo se nel carrello è già presente quel prodotto
     str+=data.length+1;     // vado a prendere l'indice della quantità
-    var temp = old.slice(str, old.indexOf("!"));        // guardo la sua quantità
+    var temp = old.slice(str, old.indexOf(data+"|"+    +"!"));        // guardo la sua quantità
     old = old.replace(data+"|"+temp, data+"|"+(parseInt(temp)+parseInt(quantity)));     // aggiorno la quantità
     return old;
 }
@@ -216,39 +216,20 @@ function RemoveToCart(id){
     var old = localStorage.getItem("products");
     old=old.replace(name+"|"+parseInt(quantity)+"!", "")
     localStorage.setItem("products",  old);
-    cart(); 
 }
-/*
-function clearCar(url){
-    price=document.getElementById("total_price").innerHTML;
-        fetch(url, {
-        method: "post",
-        headers: { "Content-type": "application/x-www-form-urlencoded" },
-        }).then(function (response) {
-            if(response.status != 200){
-                console.log("problem: "+response.status);
-                return false;
-            }
-            //get the text from the response
-            return response.text();
 
-        }).then(function (result) {
-    
-        if(result==="ko" ){
-            document.getElementById("control").innerHTML="Utente non autenticato";
-            document.getElementById("myform").addEventListener("submit", function(event){
-                event.preventDefault();
-            });
-            
-        }
-        else{
-            document.getElementById("control").innerHTML="";
+function addEval(id){
+    var name = document.getElementById("product_"+id).innerHTML;
+    var evaluation = document.getElementById("productEval_"+id).value;
+    //window.location="valutationProcess.php?products="+name+"|"+evaluation;
+    RemoveToCart(id);
+    valutazione();
+}
 
-        }
-       
-        });
+function clearCart(){
+    localStorage.clear();
     }
-*/
+
 /* FUNZIONI CART */
 
 

@@ -34,6 +34,3 @@ header("Refresh:2; url=login.php");
 include "footer.php";
 
 ?>
-
-</body>
-</html>
