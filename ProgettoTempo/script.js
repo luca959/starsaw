@@ -230,7 +230,7 @@ function getCookie(cname) {
       return c.substring(name.length, c.length);
     }
   }
-  return "";
+  return null;
 }
 
 function RemoveToCart(id){
@@ -240,14 +240,18 @@ function RemoveToCart(id){
     old=old.replace(name+"|"+parseInt(quantity)+"!", "")
     //localStorage.setItem("products",  old);
     document.cookie = "products="+old+"";
+    if(getCookie("products")=="") clearCart();
 }
 
 function addEval(id){
     var name = document.getElementById("product_"+id).innerHTML;
     var evaluation = document.getElementById("productEval_"+id).value;
+    //window.location="valutationProcess.php";
     //window.location="valutationProcess.php?products="+name+"|"+evaluation;
+    document.cookie = "toEval="+name+"|"+evaluation+"";
+    window.location="valutationProcess.php";
     RemoveToCart(id);
-    valutazione();
+    //valutazione();
 }
 
 function clearCart(){
