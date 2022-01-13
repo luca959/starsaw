@@ -171,12 +171,11 @@ function est(){
 function guid(){
     window.location="guida.php";
 }
-
 function cart(){
-    window.location="cart.php?products="+localStorage.getItem('products');
+    window.location="cart.php";
 }
 function valutazione(){
-    window.location="valutation.php?products="+localStorage.getItem('products');
+    window.location="valutation.php";
 }
 function index(){
     clearCart();
@@ -191,31 +190,56 @@ function index(){
 function addToCart(id){
     var name = document.getElementById("product_"+id).innerHTML;
     var quantity = document.getElementById("quantity_"+id).value;
-    var data = name+"|"+quantity+"!";
-    var old = localStorage.getItem("products");
-    if(old === null) {
-        old = "";
-    }
-    localStorage.setItem("products",  merge(old, name, quantity)); 
+    document.cookie = "products="+merge(name, quantity)+"";
+    //localStorage.setItem("products",  merge(name, quantity)); 
 }
 
-function merge(old, data, quantity){        //cancello le ripetizione nel carrello di un prodotto
-    str = old.indexOf(data);        //restiuisce l'indice do inizia il nome dell'elemento da aggiungere al carrello
-    if(str==-1){
-        return(old + data+"|"+quantity+"!");
-    }       //guardo se nel carrello è già presente quel prodotto
-    str+=data.length+1;     // vado a prendere l'indice della quantità
-    var temp = old.slice(str, old.indexOf(data+"|"+    +"!"));        // guardo la sua quantità
-    old = old.replace(data+"|"+temp, data+"|"+(parseInt(temp)+parseInt(quantity)));     // aggiorno la quantità
-    return old;
+function merge(name, quantity){        //cancello le ripetizione nel carrello di un prodotto
+    var old = getCookie("products");
+    //var old = localStorage.getItem("products");
+    if(old === null) return(name+"|"+quantity+"!");
+    var temp = old.split("!");
+    var newStr="";
+    var trovato=false;
+    temp.forEach(prod=>{
+        if(prod=="") return;        //se il punto esclamativo è l'ultimo prod è vuoto quindi lo salto
+        if(prod.split("|")[0]==name){
+            trovato=true;       //se nella local storage c'è già quell'elemento
+            var newQuantity=parseInt(prod.split("|")[1])+parseInt(quantity);        //sommo alla sua quantità la quantità nuova
+            newStr+=name+"|"+newQuantity;
+        }
+        else{
+            newStr+=prod;       //sennò riscrivo quello che c'era
+        }
+        newStr+="!";
+    })
+    if(!trovato) newStr+=name+"|"+quantity+"!";     //se invece quell'elemento non c'era lo aggiungo con la relativa quantità
+    return newStr;
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 
 function RemoveToCart(id){
     var name = document.getElementById("product_"+id).innerHTML;
     var quantity = document.getElementById("quantity_"+id).innerHTML;
-    var old = localStorage.getItem("products");
+    var old = getCookie("products");
     old=old.replace(name+"|"+parseInt(quantity)+"!", "")
-    localStorage.setItem("products",  old);
+    //localStorage.setItem("products",  old);
+    document.cookie = "products="+old+"";
 }
 
 function addEval(id){
@@ -227,7 +251,8 @@ function addEval(id){
 }
 
 function clearCart(){
-    localStorage.clear();
+    //localStorage.clear();
+    document.cookie = "products="+getCookie("products")+"; expires=Thu, 18 Dec 2021 12:00:00 UTC";
     }
 
 /* FUNZIONI CART */

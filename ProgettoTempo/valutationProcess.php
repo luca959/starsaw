@@ -17,13 +17,15 @@
 include "menu.php";
 include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 echo '<div class="mydiv">';
-$pieces = $_GET['products'];
-$elem = explode("|", $pieces);
-$insert_query = "INSERT INTO valutazioni (prodotto,voto) VALUES ('$elem[0]', '$elem[1]')"; // query per inserire un nuovo voto
-$res = mysqli_query($con, $insert_query);
-echo "<h1 class = 'center'> Grazie per il feedback </h1>";
+if (isset($_COOKIE['products'])) {
+    $pieces = $_COOKIE['products'];
+    echo $pieces;
+    $elem = explode("|", $pieces);
+    $insert_query = "INSERT INTO valutazioni (prodotto,voto) VALUES ('$elem[0]', '$elem[1]')"; // query per inserire un nuovo voto
+    $res = mysqli_query($con, $insert_query);
+    echo "<h1 class = 'center'> Grazie per il feedback </h1>";
 //header("Refresh:0; url=valutation.php");
-
+}
 ?>
 </div>
 <?php

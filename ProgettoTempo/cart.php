@@ -17,17 +17,20 @@
 include "menu.php";
 include $_SERVER['DOCUMENT_ROOT'] . '/../private/connection.php';
 echo '<div class="mydiv">';
-$pieces = explode("!", $_GET['products']);
 $prezzoTot = 0;
-$count = 0;
 
-foreach ($pieces as $prod) {
-    $elem = explode("|", $prod);
-    $select_query = "SELECT * FROM items WHERE nome = '" . $elem[0] . "'";
-    $res = mysqli_query($con, $select_query);
+if (isset($_COOKIE['products'])) {
+    $pieces = explode("!", $_COOKIE["products"]);
 
-    while ($row = mysqli_fetch_assoc($res)) {
-        echo '
+    $count = 0;
+
+    foreach ($pieces as $prod) {
+        $elem = explode("|", $prod);
+        $select_query = "SELECT * FROM items WHERE nome = '" . $elem[0] . "'";
+        $res = mysqli_query($con, $select_query);
+
+        while ($row = mysqli_fetch_assoc($res)) {
+            echo '
         <div>
             <div class="product">
                 <img class="productImage" src="' . $row['immagine'] . '" alt="' . $row['nome'] . '">
@@ -40,10 +43,11 @@ foreach ($pieces as $prod) {
                 <p class="center"  >Rimuovi dal Carello</p>
             </div>
         </div>';
-        $count++;
-        $prezzoTot += $elem[1] * $row['prezzo'];
-    }
+            $count++;
+            $prezzoTot += $elem[1] * $row['prezzo'];
+        }
 
+    }
 }
 ?>
 </div>
