@@ -41,3 +41,4 @@ if (!isset($_SESSION['email'])) {
 </nav>
 ';
 }
+?>
