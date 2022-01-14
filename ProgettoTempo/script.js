@@ -259,6 +259,19 @@ function clearCart(){
     document.cookie = "products="+getCookie("products")+"; expires=Thu, 18 Dec 2021 12:00:00 UTC";
     }
 
+
+function emptycart(){
+    if(document.getElementById("total_price").innerHTML=="0"){
+        document.getElementById("myform").addEventListener("submit", function(event){
+            event.preventDefault();
+          });
+          document.getElementById("control").innerHTML="Carrello vuoto, Impossibile effettuare acquisti";
+    }
+    else{
+        document.getElementById("control").innerHTML="";
+
+    }
+}
 /* FUNZIONI CART */
 
 

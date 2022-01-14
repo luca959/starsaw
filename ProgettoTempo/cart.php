@@ -55,7 +55,7 @@ if (isset($_COOKIE['products'])) {
 echo '<h1 class="center" >Il prezzo totale è:<span id="total_price">' . $prezzoTot . '</span> $ </h1>'
 ?>
         <form class="center" method="GET" action="order.php" id="myform">
-            <input type="submit" class="submit" value="Procedi all' ordine" >
+            <input type="submit" class="submit" value="Procedi all' ordine" onclick="emptycart()">
             <p id="control" style="color:red"></p>
         </form>';
 <?php
